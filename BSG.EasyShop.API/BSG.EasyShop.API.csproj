@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.14">		
+
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\BSG.EasyShop.Application\BSG.EasyShop.Application.csproj" />
+		<ProjectReference Include="..\BSG.EasyShop.Identity\BSG.EasyShop.Identity.csproj" />
+		<ProjectReference Include="..\BSG.EasyShop.Infrastructure\BSG.EasyShop.Infrastructure.csproj" />
+		<ProjectReference Include="..\BSG.EasyShop.Persistence\BSG.EasyShop.Persistence.csproj" />
+	</ItemGroup>
+
+</Project>

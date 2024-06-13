@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BSG.EasyShop.WebUI.MVC.props" />
+</Project>
