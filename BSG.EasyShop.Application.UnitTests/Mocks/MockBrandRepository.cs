@@ -12,8 +12,8 @@ namespace BSG.EasyShop.Application.UnitTests.Mocks
         {
             var brands = new List<Domain.Brand>()
             {
-                new Domain.Brand{ Id=1, FaTitle="اپل", EnTitle="Apple", ImagePath=""},
-                new Domain.Brand{ Id=2, FaTitle="سامسونگ", EnTitle="Samsung", ImagePath=""}                
+                new Domain.Brand{ Id=1, Title="اپل", ImagePath=""},
+                new Domain.Brand{ Id=2, Title="سامسونگ", ImagePath=""}                
             };
 
             var mockRepository = new Mock<IBrandRepository>();

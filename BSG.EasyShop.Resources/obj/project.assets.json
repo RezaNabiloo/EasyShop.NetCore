@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.Resources\\BSG.EasyShop.Resources.csproj",
-      "projectName": "BSG.EasyShop.Resources",
-      "projectPath": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.Resources\\BSG.EasyShop.Resources.csproj",
+      "projectUniqueName": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.Resources\\BSG.EasyShop.Resource.csproj",
+      "projectName": "BSG.EasyShop.Resource",
+      "projectPath": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.Resources\\BSG.EasyShop.Resource.csproj",
       "packagesPath": "C:\\Users\\r.nabiloo.TITZ\\.nuget\\packages\\",
       "outputPath": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.Resources\\obj\\",
       "projectStyle": "PackageReference",

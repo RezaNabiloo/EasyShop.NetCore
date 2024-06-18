@@ -6,12 +6,10 @@ namespace BSG.EasyShop.Application.DTOs.Brand.Validators
     {
         public IBrandDTOValidator()
         {
-            RuleFor(x => x.FaTitle)
-                .NotNull().NotEmpty().WithMessage("{PropertyNam is required.}")
+            RuleFor(x => x.Title)
+                .NotNull().NotEmpty().WithMessage("{Title is required.}")
                 .MaximumLength(50).WithMessage("{PropertyNam} ength is more than 50.}");
 
-            RuleFor(x => x.EnTitle)
-                .MaximumLength(50).WithMessage("{PropertyNam} ength is more than 50.}");
         }
     }
 }

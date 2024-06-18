@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSG.EasyShop.WebUI.MVC", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BSG.EasyShop.Identity", "BSG.EasyShop.Identity\BSG.EasyShop.Identity.csproj", "{0E98D6A5-6AFA-44FC-AFE0-935A8AEC526A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSG.EasyShop.Resources", "BSG.EasyShop.Resources\BSG.EasyShop.Resources.csproj", "{CA0397D9-3031-446C-92DC-36BF325E6BF9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BSG.EasyShop.Resource", "BSG.EasyShop.Resources\BSG.EasyShop.Resource.csproj", "{CA0397D9-3031-446C-92DC-36BF325E6BF9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

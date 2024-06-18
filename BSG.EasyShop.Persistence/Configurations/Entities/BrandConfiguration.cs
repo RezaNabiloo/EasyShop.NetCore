@@ -11,13 +11,12 @@ namespace BSG.EasyShop.Persistence.Configurations.Entities
             builder.HasData(
                 new Brand { 
                     Id=1,
-                    FaTitle="اپل",
-                    EnTitle="Apple"
+                    Title="اپل"
+                    
                 },
                 new Brand { 
                     Id=2,
-                    FaTitle="سامسونگ",
-                    EnTitle="Samsung"
+                    Title="سامسونگ"
                 }
                 );
         }

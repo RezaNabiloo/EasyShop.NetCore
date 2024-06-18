@@ -4,9 +4,9 @@ namespace BSG.EasyShop.Application.DTOs.Brand
 {
     public interface IBrandDTO
     {
-        public string FaTitle { get; set; }
-        public string EnTitle { get; set; }
+        public string Title { get; set; }        
         public string ImagePath { get; set; }
+        public string Description { get; set; }
 
     }
 }

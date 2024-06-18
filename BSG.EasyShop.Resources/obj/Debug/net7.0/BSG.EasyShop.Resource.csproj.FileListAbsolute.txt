@@ -1,0 +1,14 @@
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\bin\Debug\net7.0\BSG.EasyShop.Resource.deps.json
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\bin\Debug\net7.0\BSG.EasyShop.Resource.dll
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\bin\Debug\net7.0\BSG.EasyShop.Resource.pdb
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\BSG.EasyShop.Resource.csproj.AssemblyReference.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\BSG.EasyShop.Resource.ResourceFa.resources
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\BSG.EasyShop.Resource.csproj.GenerateResource.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\BSG.EasyShop.Resource.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\BSG.EasyShop.Resource.AssemblyInfoInputs.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\BSG.EasyShop.Resource.AssemblyInfo.cs
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\BSG.EasyShop.Resource.csproj.CoreCompileInputs.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\BSG.EasyShop.Resource.dll
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\refint\BSG.EasyShop.Resource.dll
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\BSG.EasyShop.Resource.pdb
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Resources\obj\Debug\net7.0\ref\BSG.EasyShop.Resource.dll
