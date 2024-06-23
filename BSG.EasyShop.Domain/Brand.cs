@@ -2,7 +2,7 @@
 
 namespace BSG.EasyShop.Domain
 {
-    public class Brand : BaseEntity
+    public class Brand : BaseDomainEntity
     {
 
         public string Title { get; set; }        

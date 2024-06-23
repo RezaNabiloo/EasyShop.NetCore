@@ -2,7 +2,7 @@
 
 namespace BSG.EasyShop.Domain
 {
-    public class Color : BaseEntity
+    public class Color : BaseDomainEntity
     {
 
         public string Title { get; set; }        

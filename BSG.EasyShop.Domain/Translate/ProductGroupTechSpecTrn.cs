@@ -2,7 +2,7 @@
 
 namespace BSG.EasyShop.Domain.Translate
 {
-    public class ProductGroupTechSpecTrn : TranslateEntity
+    public class ProductGroupTechSpecTrn : BaseDomainTranslateEntity
     {
         public long ProductGroupTechSpecId { get; set; }
         public ProductGroupTechSpec ProductGroupTechSpec { get; set; }

@@ -5,7 +5,7 @@ namespace BSG.EasyShop.Domain.Translate
     /// <summary>
     /// Entity for Brand Translation in selected langueges
     /// </summary>
-    public class BrandTrn : TranslateEntity
+    public class BrandTrn : BaseDomainTranslateEntity
     {
         public long BrandId { get; set; }
         public Brand Brand { get; set; }

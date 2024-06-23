@@ -8,7 +8,7 @@ namespace BSG.EasyShop.Application.DTOs.Brand.Validators
         {
             RuleFor(x => x.Title)
                 .NotNull().NotEmpty().WithMessage("{Title is required.}")
-                .MaximumLength(50).WithMessage("{PropertyNam} ength is more than 50.}");
+                .MaximumLength(50).WithMessage("{PropertyNam} Length is more than 50.}");
 
         }
     }

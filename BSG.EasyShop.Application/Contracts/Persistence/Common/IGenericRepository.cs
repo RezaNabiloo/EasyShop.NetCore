@@ -2,8 +2,8 @@
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<T?> GetItemByKey(long id);
-        Task<IReadOnlyList<T>> GetAllItems();
+        Task<T?> GetByKey(long id);
+        Task<IReadOnlyList<T>> GetAll();
         Task<T> Add(T entity);
         Task Update(T entity);
         Task Remove(T entity);

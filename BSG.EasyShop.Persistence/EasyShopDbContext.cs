@@ -28,7 +28,7 @@ namespace BSG.EasyShop.Persistence
 
         public override Task<int> SaveChangesAsync(bool acceptAllChangesOnSuccess, CancellationToken cancellationToken = default)
         {
-            foreach (var entry in ChangeTracker.Entries<BaseEntity>())
+            foreach (var entry in ChangeTracker.Entries<BaseDomainEntity>())
             {
                 entry.Entity.LastUpdateTime = DateTime.Now;
 
@@ -43,7 +43,7 @@ namespace BSG.EasyShop.Persistence
 
         public override int SaveChanges()
         {
-            foreach (var entry in ChangeTracker.Entries<BaseEntity>())
+            foreach (var entry in ChangeTracker.Entries<BaseDomainEntity>())
             {
                 entry.Entity.LastUpdateTime = DateTime.Now;
 

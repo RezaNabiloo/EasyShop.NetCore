@@ -2,7 +2,7 @@
 
 namespace BSG.EasyShop.Domain
 {
-    public class ProductGroupSize : BaseEntity
+    public class ProductGroupSize : BaseDomainEntity
     {
 
         public string Title { get; set; }        

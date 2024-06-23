@@ -2,7 +2,7 @@
 
 namespace BSG.EasyShop.Domain
 {
-    public class Languege : BaseEntity
+    public class Languege : BaseDomainEntity
     {   
         public string Title { get; set; }
         public string OriginalTitle{ get; set; }

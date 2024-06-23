@@ -2,7 +2,7 @@
 
 namespace BSG.EasyShop.Domain
 {
-    public class ProductGroupTechSpec : BaseEntity
+    public class ProductGroupTechSpec : BaseDomainEntity
     {
 
         public long ProductGroupId { get; set; }

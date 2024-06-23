@@ -2,7 +2,7 @@
 
 namespace BSG.EasyShop.Domain
 {
-    public class Province : BaseEntity
+    public class Province : BaseDomainEntity
     {
 
         public string Title { get; set; }        

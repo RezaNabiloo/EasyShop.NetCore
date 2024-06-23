@@ -50,7 +50,7 @@ namespace BSG.EasyShop.Application.Features.Brand.Handler.Commands
                 To = "Customer@gmail.com",
                 Subject = "Create Brand Submited.",
                 Body = $"Brand creation successfully with id : {data.Id}" +
-                        $"yoi can see this in database"
+                        $"you can see this in database"
             };
 
             try
@@ -62,10 +62,6 @@ namespace BSG.EasyShop.Application.Features.Brand.Handler.Commands
                 // TOD O
                 // log error
             }
-
-
-
-
             return response;
         }
     }
