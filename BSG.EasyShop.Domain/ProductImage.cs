@@ -6,10 +6,10 @@ namespace BSG.EasyShop.Domain
     {
         public long ProductId { get; set; }
         public Product Product { get; set; }
-        public string ImageUrl { get; set; }
-        public string ImageUrlNormalSize { get; set; }
-        public string ImageUrlThumbnailSize { get; set; }
-        public string ImageUrlFingerSize { get; set; }
+        public string ImagePathOriginalSize { get; set; }
+        public string ImagePathNormalSize { get; set; }
+        public string ImagePathThumbnailSize { get; set; }
+        public string ImagePathFingerSize { get; set; }
         public int ViewOrder { get; set; }
     }
 }

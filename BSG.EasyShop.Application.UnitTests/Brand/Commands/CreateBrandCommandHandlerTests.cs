@@ -2,8 +2,8 @@
 using BSG.EasyShop.Application.Contracts.Infrastructure.Email;
 using BSG.EasyShop.Application.Contracts.Persistance;
 using BSG.EasyShop.Application.DTOs.Brand;
-using BSG.EasyShop.Application.Features.Brand.Handler.Commands;
-using BSG.EasyShop.Application.Features.Brand.Request.Commands;
+using BSG.EasyShop.Application.Features.Brand.Handlers.Commands;
+using BSG.EasyShop.Application.Features.Brand.Requests.Commands;
 using BSG.EasyShop.Application.Profiles;
 using BSG.EasyShop.Application.Responses;
 using BSG.EasyShop.Application.UnitTests.Mocks;
@@ -33,8 +33,7 @@ namespace BSG.EasyShop.Application.UnitTests.Brand.Commands
             // we can create this object in body. but for make easy i create this in constractor
             _createBrandDTO = new BrandCreateDTO
             {
-                FaTitle = "ال جی",
-                EnTitle = "LG",
+                Title = "ال جی",                
                 ImagePath = ""
             };
         }

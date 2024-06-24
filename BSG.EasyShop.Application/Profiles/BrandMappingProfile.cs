@@ -8,7 +8,7 @@ namespace BSG.EasyShop.Application.Profiles
     {
         public BrandMappingProfile()
         {
-            CreateMap<Brand, BrandDTO>().ReverseMap();
+            CreateMap<Brand, ProductImageDTO>().ReverseMap();
             CreateMap<Brand, BrandListDTO>().ReverseMap();
             CreateMap<Brand, BrandCreateDTO>().ReverseMap();
             CreateMap<Brand, BrandUpdateDTO>().ReverseMap();

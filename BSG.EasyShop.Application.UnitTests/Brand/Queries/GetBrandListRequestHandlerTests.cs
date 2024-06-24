@@ -1,7 +1,8 @@
 ﻿using AutoMapper;
 using BSG.EasyShop.Application.Contracts.Persistance;
 using BSG.EasyShop.Application.DTOs.Brand;
-using BSG.EasyShop.Application.Features.Brand.Handler.Queries;
+using BSG.EasyShop.Application.Features.Brand.Handlers.Queries;
+using BSG.EasyShop.Application.Features.Brand.Requests.Queries;
 using BSG.EasyShop.Application.Features.ProductGroup.Requests.Queries;
 using BSG.EasyShop.Application.Profiles;
 using BSG.EasyShop.Application.UnitTests.Mocks;

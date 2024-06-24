@@ -31,6 +31,11 @@ namespace BSG.EasyShop.Application.DTOs.Product.Validators
                     return !exist && (id > 0) ;
                 }).WithMessage("{PropertyName} dose not exists.");
 
+
+            RuleFor(x => x.Price).NotNull().NotEmpty().GreaterThan(0).WithMessage("{PropertyName} must be grater than zero.");
+            RuleFor(x => x.Discount).NotNull().NotEmpty().GreaterThanOrEqualTo(0).WithMessage("{PropertyName} can not be negative.");
+
+
         }
     }
 }

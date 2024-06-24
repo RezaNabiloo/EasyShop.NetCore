@@ -12,7 +12,7 @@ namespace BSG.EasyShop.Application.DTOs.Product.Validators
             _productRepository = productRepository;
 
 
-            RuleFor(x => x.Id).NotNull().WithMessage("{PropertyNam is required.}")
+            RuleFor(x => x.Id).NotNull().WithMessage("{PropertyNam} is required.")
                 .MustAsync(async (id, token) =>
                 {
                     var exist = await _productRepository.Exist(id);
@@ -22,7 +22,7 @@ namespace BSG.EasyShop.Application.DTOs.Product.Validators
                 ).WithMessage("PropertyName dose not exists");
 
 
-            RuleFor(x => x.IsConfirmed).NotNull().WithMessage("{PropertyNam} ength is more than 50.}");
+            RuleFor(x => x.IsConfirmed).NotNull().WithMessage("{PropertyNam} is required.");
         }
     }
 }

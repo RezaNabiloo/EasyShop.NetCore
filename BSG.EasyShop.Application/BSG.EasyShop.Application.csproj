@@ -17,4 +17,13 @@
     <ProjectReference Include="..\BSG.EasyShop.Domain\BSG.EasyShop.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Color\Handlers\Commands\" />
+    <Folder Include="Features\Color\Requests\Commands\" />
+    <Folder Include="Features\NewFolder\Handlers\Commands\" />
+    <Folder Include="Features\NewFolder\Handlers\Queries\" />
+    <Folder Include="Features\NewFolder\Requests\Commands\" />
+    <Folder Include="Features\NewFolder\Requests\Queries\" />
+  </ItemGroup>
+
 </Project>

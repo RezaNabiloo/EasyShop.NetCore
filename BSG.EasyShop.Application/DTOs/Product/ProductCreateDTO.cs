@@ -7,11 +7,17 @@ namespace BSG.EasyShop.Application.DTOs.Product
     {
         public string Title { get; set; }
         public string Model { get; set; }
-
         public long ProductGroupId { get; set; }
         public ProductGroupDTO ProductGroup { get; set; }
-
         public long? BrandId { get; set; }
-        public BrandDTO Brand { get; set; }
+        public ProductImageDTO Brand { get; set; }
+        public long Price { get; set; }
+        public long Discount { get; set; }
+        public string ShortDescription { get; set; }
+        public string Description { get; set; }
+        public string Keywords { get; set; }
+        public string Slug { get; set; }
+        public bool OutOfSale { get; set; }
+        public bool IsActive { get; set; }
     }
 }

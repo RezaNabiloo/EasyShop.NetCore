@@ -1,6 +1,6 @@
 ﻿using BSG.EasyShop.Application.DTOs.Brand;
-using BSG.EasyShop.Application.Features.Brand.Request.Commands;
 using BSG.EasyShop.Application.Features.Brand.Requests.Commands;
+using BSG.EasyShop.Application.Features.Brand.Requests.Queries;
 using BSG.EasyShop.Application.Features.ProductGroup.Requests.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
@@ -34,7 +34,7 @@ namespace BSG.EasyShop.API.Controllers
 
         // GET api/<BrandController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BrandDTO>> Get(long id)
+        public async Task<ActionResult<ProductImageDTO>> Get(long id)
         {
             var brand = await _mediator.Send(new GetBrandRequest { Id = id });
             return Ok(brand);
