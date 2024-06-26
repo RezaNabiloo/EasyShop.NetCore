@@ -2,7 +2,7 @@
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<T?> GetItemByKey(long id);
+        Task< T?> GetItemByKey(long id);
         Task<IReadOnlyList<T>> GetAllItems();
         Task<T> Add(T entity);
         Task Update(T entity);

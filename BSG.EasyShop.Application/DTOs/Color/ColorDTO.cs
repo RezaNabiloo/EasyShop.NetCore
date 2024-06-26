@@ -2,10 +2,10 @@
 
 namespace BSG.EasyShop.Application.DTOs.Color
 {
-    public class ColorDTO:BaseDTO
+    public class ColorDTO:BaseDTO, IColorDTO
     {
         public string Title { get; set; }
-        public string Code { get; set; }
+        public string ColorCode { get; set; }
         public string Description { get; set; }
     }
 }

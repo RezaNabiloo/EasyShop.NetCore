@@ -6,7 +6,7 @@ using MediatR;
 
 namespace BSG.EasyShop.Application.Features.Brand.Handlers.Queries
 {
-    public class GetBrandListRequestHandler : IRequestHandler<GetBrandListRequest, List<BrandListDTO>>
+    public class GetBrandListRequestHandler : IRequestHandler<GetBrandListRequest, List<BrandDTO>>
     {
         private readonly IBrandRepository _brandRepository;
         private readonly IMapper _mapper; 
@@ -16,10 +16,10 @@ namespace BSG.EasyShop.Application.Features.Brand.Handlers.Queries
             _brandRepository = brandRepository;
             _mapper = mapper;
         }
-        public async Task<List<BrandListDTO>> Handle(GetBrandListRequest request, CancellationToken cancellationToken)
+        public async Task<List<BrandDTO>> Handle(GetBrandListRequest request, CancellationToken cancellationToken)
         {
             var brandList = await _brandRepository.GetAllItems();
-            return _mapper.Map<List<BrandListDTO>>(brandList);
+            return _mapper.Map<List<BrandDTO>>(brandList);
         }
     }
 }

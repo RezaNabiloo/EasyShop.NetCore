@@ -3,15 +3,10 @@ using BSG.EasyShop.Application.Contracts.Persistance;
 using BSG.EasyShop.Application.DTOs.Color;
 using BSG.EasyShop.Application.Features.Color.Requests.Queries;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BSG.EasyShop.Application.Features.Color.Handlers.Queries
 {
-    public class GetColorListRequestHandler : IRequestHandler<GetColorListRequest, List<ColorListDTO>>
+    public class GetColorListRequestHandler : IRequestHandler<GetColorListRequest, List<ColorDTO>>
     {
         private readonly IColorRepository _colorRepository;
         private readonly IMapper _mapper;
@@ -22,10 +17,10 @@ namespace BSG.EasyShop.Application.Features.Color.Handlers.Queries
         }
         
 
-        public async Task<List<ColorListDTO>> Handle(GetColorListRequest request, CancellationToken cancellationToken)
+        public async Task<List<ColorDTO>> Handle(GetColorListRequest request, CancellationToken cancellationToken)
         {
             var colorList = await _colorRepository.GetAllItems();
-            return _mapper.Map<List<ColorListDTO>>(colorList);
+            return _mapper.Map<List<ColorDTO>>(colorList);
         }
     }
 }

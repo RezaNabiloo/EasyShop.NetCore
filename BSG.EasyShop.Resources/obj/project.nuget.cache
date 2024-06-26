@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T2kNA6RMcRtgc+dAPQrQXPVX17v+K4EoErz+ao45rlWFT9GkyARfVzccLySHpjqUL2XWpY0ReNjm1nwnaJ9cRw==",
+  "dgSpecHash": "/ZoJRspOYmY53PH+s3osG+/3b3pqJlDbPBfHkoI+aC1edO23et2kVVXuZe4lTkdyYPMhCpImZIIQqFqVHkohHg==",
   "success": true,
-  "projectFilePath": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.Resources\\BSG.EasyShop.Resource.csproj",
+  "projectFilePath": "D:\\EasyShop.NetCore\\BSG.EasyShop.Resources\\BSG.EasyShop.Resource.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
