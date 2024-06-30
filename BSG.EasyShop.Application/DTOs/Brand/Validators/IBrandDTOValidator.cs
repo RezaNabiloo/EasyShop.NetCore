@@ -7,7 +7,7 @@ namespace BSG.EasyShop.Application.DTOs.Brand.Validators
         public IBrandDTOValidator()
         {
             RuleFor(x => x.Title)
-                .NotNull().NotEmpty().WithMessage("{Title is required.}")
+                .NotNull().NotEmpty().WithMessage("{PropertyName} is required.")
                 .MaximumLength(50).WithMessage("{PropertyNam} Length is more than 50.}");
 
         }

@@ -1,28 +1,27 @@
 ﻿using AutoMapper;
 using BSG.EasyShop.Application.Contracts.Persistance;
-using BSG.EasyShop.Application.Exceptions;
-using BSG.EasyShop.Application.Features.Brand.Requests.Commands;
+using BSG.EasyShop.Application.Features.Color.Requests.Commands;
 using BSG.EasyShop.Application.Responses;
 using MediatR;
 
-namespace BSG.EasyShop.Application.Features.Brand.Handlers.Commands
+namespace BSG.EasyShop.Application.Features.Color.Handlers.Commands
 {
-    public class DeleteBrandCommandHandler : IRequestHandler<DeleteBrandCommand, BaseCommandResponse>
+    public class DeleteColorCommandHandler : IRequestHandler<DeleteColorCommand, BaseCommandResponse>
     {
-        private readonly IBrandRepository _brandRepository;
+        private readonly IColorRepository _ColorRepository;
         private readonly IMapper _mapper;
 
-        public DeleteBrandCommandHandler(IBrandRepository brandRepository, IMapper mapper)
+        public DeleteColorCommandHandler(IColorRepository ColorRepository, IMapper mapper)
         {
-            _brandRepository = brandRepository;
+            _ColorRepository = ColorRepository;
             _mapper = mapper;
         }
 
-        public async Task<BaseCommandResponse> Handle(DeleteBrandCommand request, CancellationToken cancellationToken)
+        public async Task<BaseCommandResponse> Handle(DeleteColorCommand request, CancellationToken cancellationToken)
         {
 
             var response = new BaseCommandResponse { };
-            var data = await _brandRepository.GetItemByKey(request.Id);
+            var data = await _ColorRepository.GetItemByKey(request.Id);
 
             #region Validation            
             if (data == null)
@@ -36,10 +35,10 @@ namespace BSG.EasyShop.Application.Features.Brand.Handlers.Commands
 
 
 
-            await _brandRepository.Remove(data);
+            await _ColorRepository.Remove(data);
             response.Id = data.Id;
             response.Success = true;
-            response.Message = "Creation Successful.";
+            response.Message = "Deletation Successful.";
 
             return response;
         }

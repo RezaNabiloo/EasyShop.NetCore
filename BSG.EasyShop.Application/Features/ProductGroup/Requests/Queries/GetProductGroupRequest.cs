@@ -4,7 +4,7 @@ using MediatR;
 
 namespace BSG.EasyShop.Application.Features.ProductGroup.Requests.Queries
 {
-    public class GetProductGroupDetailRequest : IRequest<ProductGroupDTO>
+    public class GetProductGroupRequest : IRequest<ProductGroupDTO>
     {
         public long Id { get; set; }
     }

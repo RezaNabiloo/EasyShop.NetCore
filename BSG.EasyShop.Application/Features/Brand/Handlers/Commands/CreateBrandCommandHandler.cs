@@ -45,23 +45,23 @@ namespace BSG.EasyShop.Application.Features.Brand.Handlers.Commands
             response.Message = "Creation Successful.";
 
 
-            var email = new Email
-            {
-                To = "Customer@gmail.com",
-                Subject = "Create Brand Submited.",
-                Body = $"Brand creation successfully with id : {data.Id}" +
-                        $"you can see this in database"
-            };
+            //var email = new Email
+            //{
+            //    To = "Customer@gmail.com",
+            //    Subject = "Create Brand Submited.",
+            //    Body = $"Brand creation successfully with id : {data.Id}" +
+            //            $"you can see this in database"
+            //};
 
-            try
-            {
-                await _emailSender.SendEmail(email);
-            }
-            catch (Exception)
-            {
-                // TOD O
-                // log error
-            }
+            //try
+            //{
+            //    await _emailSender.SendEmail(email);
+            //}
+            //catch (Exception)
+            //{
+            //    // TOD O
+            //    // log error
+            //}
             return response;
         }
     }

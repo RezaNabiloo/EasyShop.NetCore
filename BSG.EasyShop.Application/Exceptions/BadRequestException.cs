@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BSG.EasyShop.Application.Exceptions
+﻿namespace BSG.EasyShop.Application.Exceptions
 {
-    internal class BadRequestException
+    public class BadRequestException:ApplicationException
     {
+        public BadRequestException(string message):base(message)
+        {
+
+        }
     }
 }

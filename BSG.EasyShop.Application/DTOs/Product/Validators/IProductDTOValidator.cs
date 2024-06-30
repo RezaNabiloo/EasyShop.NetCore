@@ -18,7 +18,7 @@ namespace BSG.EasyShop.Application.DTOs.Product.Validators
                .NotNull().NotEmpty().WithMessage("{PropertyNam} is required.")
                .MaximumLength(50).WithMessage("{PropertyNam} length is more than 50.}");
 
-            RuleFor(x => x.ProductGroupId).NotNull().WithMessage("{PropertyNam} length is more than 50.}")
+            RuleFor(x => x.ProductGroupId).NotNull().WithMessage("{PropertyNam} is required.}")
                 .MustAsync(async (id, token) =>
                 {
                     var exist = await _productGroupRepository.Exist(id);

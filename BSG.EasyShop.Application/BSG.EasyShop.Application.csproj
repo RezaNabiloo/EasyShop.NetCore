@@ -18,11 +18,37 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Country\Handlers\Commands\" />
+    <Folder Include="Features\Country\Handlers\Queries\" />
+    <Folder Include="Features\Country\Requests\Commands\" />
+    <Folder Include="Features\Country\Requests\Queries\" />
+    <Folder Include="Features\Languege\Handlers\Commands\" />
+    <Folder Include="Features\Languege\Handlers\Queries\" />
+    <Folder Include="Features\Languege\Requests\Commands\" />
+    <Folder Include="Features\Languege\Requests\Queries\" />
+    <Folder Include="Features\ProductImage\Handlers\Commands\" />
+    <Folder Include="Features\ProductImage\Handlers\Queries\" />
+    <Folder Include="Features\ProductImage\Requests\Commands\" />
+    <Folder Include="Features\ProductImage\Requests\Queries\" />
+    <Folder Include="Features\ProductGroupTechSpec\Handlers\Commands\" />
+    <Folder Include="Features\ProductGroupTechSpec\Handlers\Queries\" />
+    <Folder Include="Features\ProductGroupTechSpec\Requests\Commands\" />
+    <Folder Include="Features\ProductGroupTechSpec\Requests\Queries\" />
+    <Folder Include="Features\ProductGroupSize\Handlers\Commands\" />
+    <Folder Include="Features\ProductGroupSize\Handlers\Queries\" />
+    <Folder Include="Features\ProductGroupSize\Requests\Commands\" />
+    <Folder Include="Features\ProductGroupSize\Requests\Queries\" />
+    <Folder Include="Features\Township\Handlers\Commands\" />
+    <Folder Include="Features\Township\Handlers\Queries\" />
+    <Folder Include="Features\Township\Requests\Commands\" />
+    <Folder Include="Features\Township\Requests\Queries\" />
+    <Folder Include="Features\Province\Handlers\Commands\" />
+    <Folder Include="Features\Province\Handlers\Queries\" />
+    <Folder Include="Features\Province\Requests\Commands\" />
+    <Folder Include="Features\Province\Requests\Queries\" />
     <Folder Include="Features\NewFolder\Requests\Commands\" />
     <Folder Include="Features\NewFolder\Handlers\Commands\" />
     <Folder Include="Features\NewFolder\Handlers\Queries\" />
-    <Folder Include="Features\Color\Handlers\Commands\" />
-    <Folder Include="Features\Color\Requests\Commands\" />
     <Folder Include="Features\NewFolder\Requests\Queries\" />
   </ItemGroup>
 
