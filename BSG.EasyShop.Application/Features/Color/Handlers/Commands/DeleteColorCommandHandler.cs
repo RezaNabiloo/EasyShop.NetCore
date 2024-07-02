@@ -33,13 +33,14 @@ namespace BSG.EasyShop.Application.Features.Color.Handlers.Commands
             }
             #endregion
 
+            else
+            {
 
-
-            await _ColorRepository.Remove(data);
-            response.Id = data.Id;
-            response.Success = true;
-            response.Message = "Deletation Successful.";
-
+                await _ColorRepository.Remove(data);
+                response.Id = data.Id;
+                response.Success = true;
+                response.Message = "Deletation Successful.";
+            }
             return response;
         }
     }

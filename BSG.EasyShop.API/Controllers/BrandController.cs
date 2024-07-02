@@ -12,7 +12,7 @@ namespace BSG.EasyShop.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     
     public class BrandController : ControllerBase
     {

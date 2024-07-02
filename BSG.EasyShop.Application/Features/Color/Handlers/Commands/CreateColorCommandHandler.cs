@@ -32,14 +32,15 @@ namespace BSG.EasyShop.Application.Features.Color.Handlers.Commands
                 response.Errors = validationResult.Errors.Select(x => x.ErrorMessage).ToList();
             }
             #endregion
+            else
+            {
+                var data = _mapper.Map<Domain.Color>(request.ColorCreateDTO);
+                await _colorRepository.Add(data);
 
-            var data = _mapper.Map<Domain.Color>(request.ColorCreateDTO);
-            await _colorRepository.Add(data);
-
-            response.Id = data.Id;
-            response.Success = true;
-            response.Message = "Creation Successful.";
-
+                response.Id = data.Id;
+                response.Success = true;
+                response.Message = "Creation Successful.";
+            }
             return response;
         }
     }

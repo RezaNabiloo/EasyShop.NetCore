@@ -12,7 +12,7 @@ namespace BSG.EasyShop.Application.DTOs.Color.Validators
 
             RuleFor(x => x.ColorCode)
                             .NotNull().NotEmpty().WithMessage("{PropertyName} is required.")
-                            .MaximumLength(7).WithMessage("{PropertyNam} Length is more than 7.}");
+                            .MaximumLength(7).WithMessage("{PropertyNam} Length is more than 7.");
 
             RuleFor(x => x.ColorCode)
            .NotEmpty().WithMessage("{PropertyName} is required.")

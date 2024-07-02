@@ -24,23 +24,24 @@ namespace BSG.EasyShop.Application.Features.Color.Handlers.Commands
             #region Validation
             var validator = new ColorUpdateDTOValidator();
             var validationResult = await validator.ValidateAsync(request.ColorUpdateDTO);
+            #endregion
+            if (validationResult.IsValid == true)
+            {
+                var color = await _colorRepository.GetItemByKey(request.Id);
+                _mapper.Map(request.ColorUpdateDTO, color);
+                await _colorRepository.Update(color);
 
-            if (validationResult.IsValid == false)
+                response.Success = true;
+                response.Message = "Update Successful.";
+            }
+            else
             {
                 response.Success = false;
                 response.Message = "Update failed";
                 response.Errors = validationResult.Errors.Select(x => x.ErrorMessage).ToList();
             }
-            #endregion
 
-            var color = await _colorRepository.GetItemByKey(request.Id);
-            _mapper.Map(request.ColorUpdateDTO, color);
-            await _colorRepository.Update(color);
-
-            
-            response.Success = true;
-            response.Message = "Update Successful.";
-            return response; 
+            return response;
         }
     }
 }

@@ -14,6 +14,8 @@ namespace BSG.EasyShop.Application
 
             // Add all mapper profiles automatically from assembly
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+
             // services.AddMediatR(Assembly.GetExecutingAssembly());
             services.AddMediatR(cfg => {
                 cfg.RegisterServicesFromAssembly(typeof(ApplicationServicesRegistration).Assembly);
