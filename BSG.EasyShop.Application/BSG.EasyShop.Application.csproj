@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\Languege\" />
+    <Folder Include="Features\Languege\Handlers\" />
     <Folder Include="Features\ProductTechSpec\" />
     <Folder Include="Features\ProductGroupTechSpec\" />
   </ItemGroup>
