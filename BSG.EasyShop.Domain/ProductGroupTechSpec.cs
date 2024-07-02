@@ -1,4 +1,5 @@
 ﻿using BSG.EasyShop.Domain.Common;
+using BSG.EasyShop.Domain.Enum;
 
 namespace BSG.EasyShop.Domain
 {
@@ -9,7 +10,7 @@ namespace BSG.EasyShop.Domain
         public ProductGroup ProductGroup { get; set; }
         public string Title { get; set; }        
         public string? ImagePath { get; set; }
-        public string DataType{ get; set; }
+        public DataType DataType{ get; set; }
         public int ViewOrder { get; set; }
     }
 }

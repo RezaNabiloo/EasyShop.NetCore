@@ -7,19 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Configurations\Entities\BrandConfiguration.cs" />
-    <Compile Remove="Configurations\Entities\ProductConfiguration.cs" />
-    <Compile Remove="Configurations\Entities\ProductGroupConfiguration.cs" />
+    <Compile Remove="Configurations\Entities\ProductTechSpecConfiguration.cs" />
     <Compile Remove="Migrations\EasyShopDbContextModelSnapshot__.cs" />
-    <Compile Remove="Repositories\BrandRepository.cs" />
-    <Compile Remove="Repositories\ColorRepository.cs" />
-    <Compile Remove="Repositories\LanguegeRepository.cs" />
-    <Compile Remove="Repositories\ProductGroupRepository.cs" />
-    <Compile Remove="Repositories\ProductGroupSizeRepository.cs" />
-    <Compile Remove="Repositories\ProductGroupTechSpecRepository.cs" />
-    <Compile Remove="Repositories\ProductImageRepository.cs" />
-    <Compile Remove="Repositories\ProductRepository.cs" />
-    <Compile Remove="Repositories\ProductTechSpecRepository.cs" />
   </ItemGroup>
 
   <ItemGroup>

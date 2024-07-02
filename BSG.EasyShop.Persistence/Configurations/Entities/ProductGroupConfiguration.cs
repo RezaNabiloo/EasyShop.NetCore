@@ -20,7 +20,7 @@ namespace BSG.EasyShop.Persistence.Configurations.Entities
                 },
                 new ProductGroup { 
                     Id= 2,  
-                    Title= "موبایل",
+                    Title= "گوشی موبایل",
                     ParentProductGroupId= 1,
                 }
                 );

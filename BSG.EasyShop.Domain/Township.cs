@@ -6,7 +6,7 @@ namespace BSG.EasyShop.Domain
     {
 
         public string Title { get; set; }        
-        public long ProvinceID { get; set; }
+        public long ProvinceId { get; set; }
         public Province Province { get; set; }
         public double Lat { get; set; }
         public double Lng { get; set; }

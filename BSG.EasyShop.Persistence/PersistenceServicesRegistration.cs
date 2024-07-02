@@ -24,15 +24,15 @@ namespace BSG.EasyShop.Persistence
             services.AddScoped(typeof(ICountryRepository), typeof(CountryRepository));            
             services.AddScoped(typeof(IProvinceRepository), typeof(ProvinceRepository));
             services.AddScoped(typeof(ITownshipRepository), typeof(TownshipRepository));
-            //services.AddScoped(typeof(ILanguegeRepository), typeof(LanguegeRepository));
-            //services.AddScoped(typeof(IColorRepository), typeof(ColorRepository));            
-            //services.AddScoped(typeof(IBrandRepository), typeof(BrandRepository));
-            //services.AddScoped(typeof(IProductGroupRepository), typeof(ProductGroupRepository));
-            //services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
-            //services.AddScoped(typeof(IProductImageRepository), typeof(ProductImageRepository));
-            //services.AddScoped(typeof(IProductTechSpecRepository), typeof(ProductTechSpecRepository));
-            //services.AddScoped(typeof(IProductGroupSizeRepository), typeof(ProductGroupSizeRepository));
-            //services.AddScoped(typeof(IProductGroupTechSpecRepository), typeof(ProductGroupTechSpecRepository));
+            services.AddScoped(typeof(ILanguegeRepository), typeof(LanguegeRepository));
+            services.AddScoped(typeof(IColorRepository), typeof(ColorRepository));
+            services.AddScoped(typeof(IBrandRepository), typeof(BrandRepository));
+            services.AddScoped(typeof(IProductGroupRepository), typeof(ProductGroupRepository));
+            services.AddScoped(typeof(IProductRepository), typeof(ProductRepository));
+            services.AddScoped(typeof(IProductImageRepository), typeof(ProductImageRepository));
+            services.AddScoped(typeof(IProductTechSpecRepository), typeof(ProductTechSpecRepository));
+            services.AddScoped(typeof(IProductGroupSizeRepository), typeof(ProductGroupSizeRepository));
+            services.AddScoped(typeof(IProductGroupTechSpecRepository), typeof(ProductGroupTechSpecRepository));
 
             // TODO how to add all scoped with loop ????
 

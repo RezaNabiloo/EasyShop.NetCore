@@ -7,61 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="DTOs\Brand\**" />
-    <Compile Remove="DTOs\Color\**" />
-    <Compile Remove="DTOs\ProductGroupSize\**" />
-    <Compile Remove="DTOs\ProductGroupTechSpec\**" />
-    <Compile Remove="DTOs\ProductGroup\**" />
-    <Compile Remove="DTOs\ProductImage\**" />
-    <Compile Remove="DTOs\ProductTechSpec\**" />
-    <Compile Remove="DTOs\Product\**" />
-    <Compile Remove="Features\Brand\**" />
-    <Compile Remove="Features\Color\**" />
-    <Compile Remove="Features\ProductGroup\**" />
-    <Compile Remove="Features\Product\**" />
-    <EmbeddedResource Remove="DTOs\Brand\**" />
-    <EmbeddedResource Remove="DTOs\Color\**" />
-    <EmbeddedResource Remove="DTOs\ProductGroupSize\**" />
-    <EmbeddedResource Remove="DTOs\ProductGroupTechSpec\**" />
-    <EmbeddedResource Remove="DTOs\ProductGroup\**" />
-    <EmbeddedResource Remove="DTOs\ProductImage\**" />
-    <EmbeddedResource Remove="DTOs\ProductTechSpec\**" />
-    <EmbeddedResource Remove="DTOs\Product\**" />
-    <EmbeddedResource Remove="Features\Brand\**" />
-    <EmbeddedResource Remove="Features\Color\**" />
-    <EmbeddedResource Remove="Features\ProductGroup\**" />
-    <EmbeddedResource Remove="Features\Product\**" />
-    <None Remove="DTOs\Brand\**" />
-    <None Remove="DTOs\Color\**" />
-    <None Remove="DTOs\ProductGroupSize\**" />
-    <None Remove="DTOs\ProductGroupTechSpec\**" />
-    <None Remove="DTOs\ProductGroup\**" />
-    <None Remove="DTOs\ProductImage\**" />
-    <None Remove="DTOs\ProductTechSpec\**" />
-    <None Remove="DTOs\Product\**" />
-    <None Remove="Features\Brand\**" />
-    <None Remove="Features\Color\**" />
-    <None Remove="Features\ProductGroup\**" />
-    <None Remove="Features\Product\**" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Remove="Contracts\Persistence\IBrandRepository.cs" />
-    <Compile Remove="Contracts\Persistence\IColorRepository.cs" />
-    <Compile Remove="Contracts\Persistence\ILanguegeRepository.cs" />
-    <Compile Remove="Contracts\Persistence\IProductGroupRepository.cs" />
-    <Compile Remove="Contracts\Persistence\IProductGroupSizeRepository.cs" />
-    <Compile Remove="Contracts\Persistence\IProductGroupTechSpecRepository.cs" />
-    <Compile Remove="Contracts\Persistence\IProductImageRepository.cs" />
-    <Compile Remove="Contracts\Persistence\IProductRepository.cs" />
-    <Compile Remove="Contracts\Persistence\IProductTechSpecRepository.cs" />
-    <Compile Remove="Profiles\BrandMappingProfile.cs" />
-    <Compile Remove="Profiles\ColorMappingProfile.cs" />
-    <Compile Remove="Profiles\ProductGroupMappingProfile.cs" />
-    <Compile Remove="Profiles\ProductMappingProfile.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.2" />
     <PackageReference Include="MediatR" Version="12.3.0" />
@@ -70,6 +15,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BSG.EasyShop.Domain\BSG.EasyShop.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Features\Languege\" />
+    <Folder Include="Features\ProductTechSpec\" />
+    <Folder Include="Features\ProductGroupTechSpec\" />
   </ItemGroup>
 
 </Project>
