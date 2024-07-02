@@ -223,14 +223,7 @@ D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Application.Un
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.genruntimeconfig.cache
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\ref\BSG.EasyShop.Application.UnitTests.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\CoverletSourceRootsMapping
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.csproj.AssemblyReference.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.AssemblyInfoInputs.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.AssemblyInfo.cs
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.csproj.CoreCompileInputs.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.dll
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\refint\BSG.EasyShop.Application.UnitTests.dll
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.pdb
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\testhost.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\EmptyFiles\archive\empty.7z
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\EmptyFiles\archive\empty.bz2
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\EmptyFiles\archive\empty.gz
@@ -274,7 +267,6 @@ D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\b
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\EmptyFiles\slide\empty.odp
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\EmptyFiles\slide\empty.pptx
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\testhost.exe
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\testhost.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\xunit.runner.reporters.netcoreapp10.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\xunit.runner.utility.netcoreapp10.dll
@@ -443,6 +435,14 @@ D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\b
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\BSG.EasyShop.Domain.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\BSG.EasyShop.Infrastructure.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\bin\Debug\net7.0\BSG.EasyShop.Persistence.pdb
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.csproj.AssemblyReference.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.AssemblyInfoInputs.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.AssemblyInfo.cs
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.csproj.CoreCompileInputs.cache
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.csproj.CopyComplete
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.dll
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\refint\BSG.EasyShop.Application.UnitTests.dll
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\BSG.EasyShop.Application.UnitTests.genruntimeconfig.cache
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application.UnitTests\obj\Debug\net7.0\ref\BSG.EasyShop.Application.UnitTests.dll

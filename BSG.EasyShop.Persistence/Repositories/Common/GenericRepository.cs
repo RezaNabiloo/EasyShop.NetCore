@@ -1,4 +1,4 @@
-﻿using BSG.EasyShop.Application.Contracts.Persistance.Common;
+﻿using BSG.EasyShop.Application.Contracts.Persistence.Common;
 using Microsoft.EntityFrameworkCore;
 
 namespace BSG.EasyShop.Persistence.Repositories.Common
@@ -10,6 +10,7 @@ namespace BSG.EasyShop.Persistence.Repositories.Common
         {
             _context = context;
         }
+
         public async Task<T> Add(T entity)
         {
             await _context.AddAsync(entity);

@@ -1,5 +1,5 @@
 ﻿using BSG.EasyShop.Application.Contracts.Infrastructure.Email;
-using BSG.EasyShop.Application.Models;
+using BSG.EasyShop.Application.Models.Email;
 using BSG.EasyShop.Infrastructure.Email;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

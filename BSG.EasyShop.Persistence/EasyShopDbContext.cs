@@ -14,10 +14,18 @@ namespace BSG.EasyShop.Persistence
             
         }
 
-        DbSet<Brand> Brands { get; set; }
-        DbSet<ProductGroup> ProductGroups { get; set; }
-        DbSet<Product> Products { get; set; }
-
+        DbSet<Country> Countries { get; set; }
+        DbSet<Province> Provinces { get; set; }
+        DbSet<Township> Townships { get; set; }
+        //DbSet<Languege> Langueges { get; set; }        
+        //DbSet<Brand> Brands { get; set; }
+        //DbSet<Color> Colors { get; set; }
+        //DbSet<ProductGroup> ProductGroups { get; set; }
+        //DbSet<Product> Products { get; set; }
+        //DbSet<ProductImage> ProductImages { get; set; }        
+        //DbSet<ProductGroupSize> ProductGroupSizes { get; set; }
+        //DbSet<ProductGroupTechSpec> ProductGroupTechSpecs { get; set; }
+        //DbSet<ProductTechSpec> ProductTechSpecs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

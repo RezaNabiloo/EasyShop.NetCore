@@ -1,5 +1,5 @@
 ﻿using BSG.EasyShop.Application.Contracts.Infrastructure.Email;
-using BSG.EasyShop.Application.Models;
+using BSG.EasyShop.Application.Models.Email;
 using Microsoft.Extensions.Options;
 using SendGrid;
 using SendGrid.Helpers.Mail;
@@ -15,7 +15,7 @@ namespace BSG.EasyShop.Infrastructure.Email
             _emailSetting = emailSetting.Value;
         }
 
-        public async Task<bool> SendEmail(Application.Models.Email email)
+        public async Task<bool> SendEmail(Application.Models.Email.Email email)
         {
 
             var client = new SendGridClient(_emailSetting.ApiKey);

@@ -206,15 +206,6 @@ D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.API\obj\Debug\
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.pdb
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.genruntimeconfig.cache
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.API\obj\Debug\net7.0\ref\BSG.EasyShop.API.dll
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.csproj.AssemblyReference.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.GeneratedMSBuildEditorConfig.editorconfig
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.AssemblyInfoInputs.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.AssemblyInfo.cs
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.csproj.CoreCompileInputs.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.MvcApplicationPartsAssemblyInfo.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.dll
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\refint\BSG.EasyShop.API.dll
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\bin\Debug\net7.0\appsettings.Development.json
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\bin\Debug\net7.0\appsettings.json
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\bin\Debug\net7.0\BSG.EasyShop.API.exe
@@ -302,6 +293,13 @@ D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\bin\Debug\net7.0\BS
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\bin\Debug\net7.0\BSG.EasyShop.Infrastructure.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\bin\Debug\net7.0\BSG.EasyShop.Persistence.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\bin\Debug\net7.0\BSG.EasyShop.Domain.pdb
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.csproj.AssemblyReference.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.AssemblyInfoInputs.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.AssemblyInfo.cs
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.csproj.CoreCompileInputs.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.MvcApplicationPartsAssemblyInfo.cs
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.MvcApplicationPartsAssemblyInfo.cache
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\staticwebassets\msbuild.BSG.EasyShop.API.Microsoft.AspNetCore.StaticWebAssets.props
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\staticwebassets\msbuild.build.BSG.EasyShop.API.props
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.BSG.EasyShop.API.props
@@ -311,5 +309,8 @@ D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\st
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\staticwebassets.development.json
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\scopedcss\bundle\BSG.EasyShop.API.styles.css
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.csproj.CopyComplete
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.dll
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\refint\BSG.EasyShop.API.dll
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.genruntimeconfig.cache
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\ref\BSG.EasyShop.API.dll

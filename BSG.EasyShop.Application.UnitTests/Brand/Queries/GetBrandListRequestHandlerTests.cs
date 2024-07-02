@@ -1,9 +1,8 @@
 ﻿using AutoMapper;
-using BSG.EasyShop.Application.Contracts.Persistance;
+using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Application.DTOs.Brand;
 using BSG.EasyShop.Application.Features.Brand.Handlers.Queries;
 using BSG.EasyShop.Application.Features.Brand.Requests.Queries;
-using BSG.EasyShop.Application.Features.ProductGroup.Requests.Queries;
 using BSG.EasyShop.Application.Profiles;
 using BSG.EasyShop.Application.UnitTests.Mocks;
 using Moq;
@@ -41,7 +40,7 @@ namespace BSG.EasyShop.Application.UnitTests.Brand.Queries
             var result = await handler.Handle(new GetBrandListRequest(), CancellationToken.None);
 
             // Test
-            result.ShouldBeOfType<List<BrandListDTO>>();
+            result.ShouldBeOfType<List<BrandDTO>>();
             result.Count.ShouldBe(2);
 
 

@@ -1,4 +1,4 @@
-﻿using BSG.EasyShop.Application.Contracts.Persistance;
+﻿using BSG.EasyShop.Application.Contracts.Persistence;
 using FluentValidation;
 using System;
 using System.Collections.Generic;

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BSG.EasyShop.Application.Contracts.Persistance;
+using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Application.DTOs.Color.Validators;
 using BSG.EasyShop.Application.Features.Color.Requests.Commands;
 using BSG.EasyShop.Application.Responses;

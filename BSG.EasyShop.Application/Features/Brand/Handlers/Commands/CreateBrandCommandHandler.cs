@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using BSG.EasyShop.Application.Contracts.Infrastructure.Email;
-using BSG.EasyShop.Application.Contracts.Persistance;
+using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Application.DTOs.Brand.Validators;
 using BSG.EasyShop.Application.Features.Brand.Requests.Commands;
 using BSG.EasyShop.Application.Models;

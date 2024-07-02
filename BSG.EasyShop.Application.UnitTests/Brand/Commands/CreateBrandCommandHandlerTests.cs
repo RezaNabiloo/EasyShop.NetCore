@@ -1,10 +1,5 @@
 ﻿using AutoMapper;
 using BSG.EasyShop.Application.Contracts.Infrastructure.Email;
-using BSG.EasyShop.Application.Contracts.Persistance;
-using BSG.EasyShop.Application.DTOs.Brand;
-using BSG.EasyShop.Application.Features.Brand.Handlers.Commands;
-using BSG.EasyShop.Application.Features.Brand.Requests.Commands;
-using BSG.EasyShop.Application.Profiles;
 using BSG.EasyShop.Application.Responses;
 using BSG.EasyShop.Application.UnitTests.Mocks;
 using Moq;

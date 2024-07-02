@@ -1,6 +1,4 @@
-﻿using BSG.EasyShop.Application.Contracts.Persistance;
-using BSG.EasyShop.Domain;
-using Microsoft.VisualBasic;
+﻿using BSG.EasyShop.Application.Contracts.Persistence;
 using Moq;
 
 namespace BSG.EasyShop.Application.UnitTests.Mocks

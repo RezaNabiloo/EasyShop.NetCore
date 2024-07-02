@@ -22,7 +22,7 @@ namespace BSG.EasyShop.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("BSG.EasyShop.Domain.Brand", b =>
+            modelBuilder.Entity("BSG.EasyShop.Domain.Country", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,106 +36,11 @@ namespace BSG.EasyShop.Persistence.Migrations
                     b.Property<Guid?>("CreateUserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("EnTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("FaTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("LastUpdateTime")
                         .HasColumnType("datetime2");
 
                     b.Property<Guid?>("LastUpdateUserId")
                         .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Brands");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            CreateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EnTitle = "Apple",
-                            FaTitle = "اپل",
-                            LastUpdateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            CreateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            EnTitle = "Samsung",
-                            FaTitle = "سامسونگ",
-                            LastUpdateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
-                        });
-                });
-
-            modelBuilder.Entity("BSG.EasyShop.Domain.Product", b =>
-                {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
-
-                    b.Property<long?>("BrandId")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("CreateUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<long>("Discount")
-                        .HasColumnType("bigint");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsConfirmed")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Keywords")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("LastUpdateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid?>("LastUpdateUserId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Model")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("OutOfSale")
-                        .HasColumnType("bit");
-
-                    b.Property<long>("Price")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("ProductGroupId")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("ShortDescription")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Slug")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -143,14 +48,53 @@ namespace BSG.EasyShop.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BrandId");
+                    b.ToTable("Countries");
 
-                    b.HasIndex("ProductGroupId");
-
-                    b.ToTable("Products");
+                    b.HasData(
+                        new
+                        {
+                            Id = 1L,
+                            CreateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            LastUpdateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            Title = "ایران"
+                        });
                 });
 
-            modelBuilder.Entity("BSG.EasyShop.Domain.ProductGroup", b =>
+            modelBuilder.Entity("BSG.EasyShop.Domain.Province", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<long>("CountryId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("CreateUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("LastUpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("LastUpdateUserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CountryId");
+
+                    b.ToTable("Provinces");
+                });
+
+            modelBuilder.Entity("BSG.EasyShop.Domain.Township", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -164,8 +108,8 @@ namespace BSG.EasyShop.Persistence.Migrations
                     b.Property<Guid?>("CreateUserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ImagePath")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("IsCapital")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime>("LastUpdateTime")
                         .HasColumnType("datetime2");
@@ -173,11 +117,14 @@ namespace BSG.EasyShop.Persistence.Migrations
                     b.Property<Guid?>("LastUpdateUserId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<long?>("ParentProductGroupId")
-                        .HasColumnType("bigint");
+                    b.Property<double>("Lat")
+                        .HasColumnType("float");
 
-                    b.Property<string>("Slug")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("Lng")
+                        .HasColumnType("float");
+
+                    b.Property<long>("ProvinceID")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -185,52 +132,31 @@ namespace BSG.EasyShop.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ParentProductGroupId");
+                    b.HasIndex("ProvinceID");
 
-                    b.ToTable("ProductGroups");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1L,
-                            CreateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LastUpdateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Title = "کالای دیجیتال"
-                        },
-                        new
-                        {
-                            Id = 2L,
-                            CreateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            LastUpdateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ParentProductGroupId = 1L,
-                            Title = "موبایل"
-                        });
+                    b.ToTable("Townships");
                 });
 
-            modelBuilder.Entity("BSG.EasyShop.Domain.Product", b =>
+            modelBuilder.Entity("BSG.EasyShop.Domain.Province", b =>
                 {
-                    b.HasOne("BSG.EasyShop.Domain.Brand", "Brand")
+                    b.HasOne("BSG.EasyShop.Domain.Country", "Country")
                         .WithMany()
-                        .HasForeignKey("BrandId");
-
-                    b.HasOne("BSG.EasyShop.Domain.ProductGroup", "ProductGroup")
-                        .WithMany()
-                        .HasForeignKey("ProductGroupId")
+                        .HasForeignKey("CountryId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Brand");
-
-                    b.Navigation("ProductGroup");
+                    b.Navigation("Country");
                 });
 
-            modelBuilder.Entity("BSG.EasyShop.Domain.ProductGroup", b =>
+            modelBuilder.Entity("BSG.EasyShop.Domain.Township", b =>
                 {
-                    b.HasOne("BSG.EasyShop.Domain.ProductGroup", "ParentProductGroup")
+                    b.HasOne("BSG.EasyShop.Domain.Province", "Province")
                         .WithMany()
-                        .HasForeignKey("ParentProductGroupId");
+                        .HasForeignKey("ProvinceID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("ParentProductGroup");
+                    b.Navigation("Province");
                 });
 #pragma warning restore 612, 618
         }

@@ -3,7 +3,7 @@ using BSG.EasyShop.Application.DTOs.Product;
 using BSG.EasyShop.Application.DTOs.ProductGroup;
 using BSG.EasyShop.Application.Features.Product.Requests.Queries;
 using BSG.EasyShop.Application.Features.ProductGroup.Requests.Queries;
-using BSG.EasyShop.Application.Contracts.Persistance;
+using BSG.EasyShop.Application.Contracts.Persistence;
 using MediatR;
 
 namespace BSG.EasyShop.Application.Features.ProductGroup.Handlers.Queries

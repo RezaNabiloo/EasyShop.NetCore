@@ -1,4 +1,4 @@
-﻿namespace BSG.EasyShop.Application.Contracts.Persistance.Common
+﻿namespace BSG.EasyShop.Application.Contracts.Persistence.Common
 {
     public interface IGenericRepository<T> where T : class
     {

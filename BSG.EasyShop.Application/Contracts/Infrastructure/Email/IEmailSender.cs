@@ -2,6 +2,6 @@
 {
     public interface IEmailSender
     {
-        Task<bool> SendEmail(Models.Email email);
+        Task<bool> SendEmail(Models.Email.Email email);
     }
 }

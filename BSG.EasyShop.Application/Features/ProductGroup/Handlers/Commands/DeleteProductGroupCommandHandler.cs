@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using BSG.EasyShop.Application.Exceptions;
 using BSG.EasyShop.Application.Features.ProductGroup.Requests.Commands;
-using BSG.EasyShop.Application.Contracts.Persistance;
+using BSG.EasyShop.Application.Contracts.Persistence;
 using MediatR;
 using System;
 using System.Collections.Generic;

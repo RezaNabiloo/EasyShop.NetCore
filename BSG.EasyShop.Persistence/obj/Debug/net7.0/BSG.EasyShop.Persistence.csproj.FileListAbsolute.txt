@@ -36,14 +36,6 @@ D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Persistence\ob
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.pdb
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.genruntimeconfig.cache
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Persistence\obj\Debug\net7.0\ref\BSG.EasyShop.Persistence.dll
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.csproj.AssemblyReference.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.GeneratedMSBuildEditorConfig.editorconfig
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.AssemblyInfoInputs.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.AssemblyInfo.cs
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.csproj.CoreCompileInputs.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.dll
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\refint\BSG.EasyShop.Persistence.dll
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\bin\Debug\net7.0\BSG.EasyShop.Persistence.deps.json
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\bin\Debug\net7.0\BSG.EasyShop.Persistence.runtimeconfig.json
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\bin\Debug\net7.0\BSG.EasyShop.Persistence.dll
@@ -52,6 +44,14 @@ D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\bin\Debug\n
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\bin\Debug\net7.0\BSG.EasyShop.Domain.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\bin\Debug\net7.0\BSG.EasyShop.Application.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\bin\Debug\net7.0\BSG.EasyShop.Domain.pdb
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.csproj.AssemblyReference.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.AssemblyInfoInputs.cache
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.AssemblyInfo.cs
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.csproj.CoreCompileInputs.cache
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.csproj.CopyComplete
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.dll
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\refint\BSG.EasyShop.Persistence.dll
+D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\BSG.EasyShop.Persistence.genruntimeconfig.cache
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Persistence\obj\Debug\net7.0\ref\BSG.EasyShop.Persistence.dll

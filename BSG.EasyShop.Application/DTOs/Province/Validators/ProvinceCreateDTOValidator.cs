@@ -1,5 +1,5 @@
 ﻿using BSG.EasyShop.Application.Contracts.Persistence;
-using BSG.EasyShop.Application.DTOs.Pvince;
+using BSG.EasyShop.Application.DTOs.Province;
 using FluentValidation;
 
 namespace BSG.EasyShop.Application.DTOs.Province.Validators

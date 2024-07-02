@@ -1,5 +1,5 @@
 ﻿using BSG.EasyShop.Domain;
-using BSG.EasyShop.Application.Contracts.Persistance;
+using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Persistence.Repositories.Common;
 
 namespace BSG.EasyShop.Persistence.Repositories

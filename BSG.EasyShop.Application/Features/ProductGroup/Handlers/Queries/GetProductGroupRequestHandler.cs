@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using BSG.EasyShop.Application.Contracts.Persistance;
+using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Application.DTOs.ProductGroup;
 using BSG.EasyShop.Application.Features.ProductGroup.Requests.Queries;
 using MediatR;

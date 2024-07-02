@@ -26,7 +26,7 @@ namespace BSG.EasyShop.API.Controllers
 
         // GET: api/<BrandController>
         [HttpGet]        
-        public async Task<ActionResult<List<BrandListDTO>>> Get()
+        public async Task<ActionResult<List<BrandDTO>>> Get()
         {
             var brandList = await _mediator.Send(new GetBrandListRequest());
             return Ok(brandList);

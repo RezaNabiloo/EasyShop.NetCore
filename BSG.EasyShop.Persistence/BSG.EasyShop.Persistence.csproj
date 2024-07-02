@@ -7,17 +7,41 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Configurations\Entities\BrandConfiguration.cs" />
+    <Compile Remove="Configurations\Entities\ProductConfiguration.cs" />
+    <Compile Remove="Configurations\Entities\ProductGroupConfiguration.cs" />
+    <Compile Remove="Migrations\EasyShopDbContextModelSnapshot__.cs" />
+    <Compile Remove="Repositories\BrandRepository.cs" />
+    <Compile Remove="Repositories\ColorRepository.cs" />
+    <Compile Remove="Repositories\LanguegeRepository.cs" />
+    <Compile Remove="Repositories\ProductGroupRepository.cs" />
+    <Compile Remove="Repositories\ProductGroupSizeRepository.cs" />
+    <Compile Remove="Repositories\ProductGroupTechSpecRepository.cs" />
+    <Compile Remove="Repositories\ProductImageRepository.cs" />
+    <Compile Remove="Repositories\ProductRepository.cs" />
+    <Compile Remove="Repositories\ProductTechSpecRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.14">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\BSG.EasyShop.Application\BSG.EasyShop.Application.csproj" />
     <ProjectReference Include="..\BSG.EasyShop.Domain\BSG.EasyShop.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

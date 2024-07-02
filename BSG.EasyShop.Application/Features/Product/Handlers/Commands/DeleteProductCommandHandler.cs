@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using BSG.EasyShop.Application.Exceptions;
 using BSG.EasyShop.Application.Features.Product.Requests.Commands;
-using BSG.EasyShop.Application.Contracts.Persistance;
+using BSG.EasyShop.Application.Contracts.Persistence;
 using MediatR;
 
 namespace BSG.EasyShop.Application.Features.Product.Handlers.Commands

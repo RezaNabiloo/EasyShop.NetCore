@@ -6,4 +6,23 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Translate\**" />
+    <EmbeddedResource Remove="Translate\**" />
+    <None Remove="Translate\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Brand.cs" />
+    <Compile Remove="Color.cs" />
+    <Compile Remove="Common\BaseDomainTranslateEntity.cs" />
+    <Compile Remove="Languege.cs" />
+    <Compile Remove="Product.cs" />
+    <Compile Remove="ProductGroup.cs" />
+    <Compile Remove="ProductGroupSize.cs" />
+    <Compile Remove="ProductGroupTechSpec.cs" />
+    <Compile Remove="ProductImage.cs" />
+    <Compile Remove="ProductTechSpec.cs" />
+  </ItemGroup>
+
 </Project>

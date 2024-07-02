@@ -10,6 +10,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Brand\**" />
+    <EmbeddedResource Remove="Brand\**" />
+    <None Remove="Brand\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Mocks\MockBrandRepository.cs" />
     <Compile Remove="UnitTest1.cs" />
   </ItemGroup>
 
@@ -33,6 +40,10 @@
     <ProjectReference Include="..\BSG.EasyShop.Domain\BSG.EasyShop.Domain.csproj" />
     <ProjectReference Include="..\BSG.EasyShop.Infrastructure\BSG.EasyShop.Infrastructure.csproj" />
     <ProjectReference Include="..\BSG.EasyShop.Persistence\BSG.EasyShop.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mocks\" />
   </ItemGroup>
 
 </Project>

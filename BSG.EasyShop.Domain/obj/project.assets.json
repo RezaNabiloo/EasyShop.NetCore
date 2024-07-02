@@ -8,23 +8,23 @@
     "net7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Duyreza\\.nuget\\packages\\": {},
+    "C:\\Users\\r.nabiloo.TITZ\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\EasyShop.NetCore\\BSG.EasyShop.Domain\\BSG.EasyShop.Domain.csproj",
+      "projectUniqueName": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.Domain\\BSG.EasyShop.Domain.csproj",
       "projectName": "BSG.EasyShop.Domain",
-      "projectPath": "D:\\EasyShop.NetCore\\BSG.EasyShop.Domain\\BSG.EasyShop.Domain.csproj",
-      "packagesPath": "C:\\Users\\Duyreza\\.nuget\\packages\\",
-      "outputPath": "D:\\EasyShop.NetCore\\BSG.EasyShop.Domain\\obj\\",
+      "projectPath": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.Domain\\BSG.EasyShop.Domain.csproj",
+      "packagesPath": "C:\\Users\\r.nabiloo.TITZ\\.nuget\\packages\\",
+      "outputPath": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Duyreza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\r.nabiloo.TITZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -66,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

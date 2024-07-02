@@ -1,4 +1,4 @@
-﻿using BSG.EasyShop.Application.Contracts.Persistance;
+﻿using BSG.EasyShop.Application.Contracts.Persistence;
 using FluentValidation;
 
 namespace BSG.EasyShop.Application.DTOs.ProductImage.Validators

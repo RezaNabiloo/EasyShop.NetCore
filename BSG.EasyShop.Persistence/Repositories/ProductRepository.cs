@@ -1,7 +1,8 @@
 ﻿
+using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Domain;
-using BSG.EasyShop.Application.Contracts.Persistance;
 using BSG.EasyShop.Persistence.Repositories.Common;
+using Microsoft.EntityFrameworkCore;
 
 namespace BSG.EasyShop.Persistence.Repositories
 {
@@ -17,6 +18,7 @@ namespace BSG.EasyShop.Persistence.Repositories
         public async Task Confirm(Product product, bool confirmStatus)
         {
             product.IsConfirmed = confirmStatus;
+            _context.Entry(product).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
     }

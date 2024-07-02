@@ -1,8 +1,7 @@
 ﻿using BSG.EasyShop.Application;
-using BSG.EasyShop.Persistence;
-using BSG.EasyShop.Infrastructure;
-using Microsoft.OpenApi.Models;
 using BSG.EasyShop.Identity;
+using BSG.EasyShop.Infrastructure;
+using BSG.EasyShop.Persistence;
 
 namespace BSG.EasyShop.API
 {
@@ -20,22 +19,20 @@ namespace BSG.EasyShop.API
             builder.Services.ConfigureApplicationServices();
             builder.Services.ConfigurePersistenceServices(builder.Configuration);
             builder.Services.ConfigureInfrastructureServices(builder.Configuration);
-            builder.Services.ConfigureIdentityServices(builder.Configuration);
+            //builder.Services.ConfigureIdentityServices(builder.Configuration);
 
             builder.Services.AddEndpointsApiExplorer();
-            //builder.Services.AddSwaggerGen();
-            // اینو غیر فعال میکنم و چون میخوام از توکن استفاده کنم در پایین سواگر رو کانفیگ کردم
+            builder.Services.AddSwaggerGen();
+            // اینو غیر فعال میکنم و چون میخوام از توکن استفاده کنم در پایین سواگر رو کانفیگ کردم 
             // میبرمش داخل متد زیری و تنظیمات رو ست میکنم
 
-            AddSwagger(builder.Services);
+            ////AddSwagger(builder.Services);
 
             builder.Services.AddCors(o =>
                 {
-                    o.AddPolicy("CorsPolicy", b => 
-                    b.AllowAnyOrigin()
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()                    
-                    );
+                    o.AddPolicy("CorsPolicy", b => b.AllowAnyOrigin()
+                                                    .AllowAnyMethod()
+                                                    .AllowAnyHeader());
                 });
 
 
@@ -49,7 +46,7 @@ namespace BSG.EasyShop.API
             }
             app.UseAuthentication();
 
-            app.UseHttpsRedirection();            
+            ////app.UseHttpsRedirection();
 
             app.UseAuthorization();
 
@@ -61,47 +58,47 @@ namespace BSG.EasyShop.API
 
 
 
-            void AddSwagger(IServiceCollection services)
-            {
-                services.AddSwaggerGen(o =>
-                {
-                    o.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
-                    {
-                        Description = @"JWT Authentication header using the Bearer schema.
-                                        Enter 'Bearer' [scpae] and then your token in the text input below.
-                                        Example : 'Bearer 123sddw'",
-                        Name = "Authorization",
-                        In = ParameterLocation.Header,
-                        Type = SecuritySchemeType.ApiKey,
-                        Scheme = "Bearer"
-                    });
+            ////void AddSwagger(IServiceCollection services)
+            ////{
+            ////    services.AddSwaggerGen(o =>
+            ////    {
+            ////        o.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme()
+            ////        {
+            ////            Description = @"JWT Authentication header using the Bearer schema.
+            ////                            Enter 'Bearer' [scpae] and then your token in the text input below.
+            ////                            Example : 'Bearer 123sddw'",
+            ////            Name = "Authorization", 
+            ////            In = ParameterLocation.Header,
+            ////            Type = SecuritySchemeType.ApiKey,
+            ////            Scheme = "Bearer"
+            ////        });
 
-                    o.AddSecurityRequirement(new OpenApiSecurityRequirement()
-                    {
-                        {
-                            new OpenApiSecurityScheme()
-                            {
-                                Reference = new OpenApiReference()
-                                {
-                                    Type=ReferenceType.SecurityScheme,
-                                    Id="Bearer"
-                                },
-                                Scheme="oauth2",
-                                Name="Bearer",
-                                In=ParameterLocation.Header
-                            },
-                            new List<string>()
-                        }
-                    });
-                    o.SwaggerDoc("v1", new OpenApiInfo()
-                    {
-                        Version = "v1",
-                        Title = "EasyShop Api",
-                    });
-                });
+            ////        o.AddSecurityRequirement(new OpenApiSecurityRequirement()
+            ////        {
+            ////            {
+            ////                new OpenApiSecurityScheme()
+            ////                {
+            ////                    Reference = new OpenApiReference()
+            ////                    {
+            ////                        Type=ReferenceType.SecurityScheme,
+            ////                        Id="Bearer"
+            ////                    },
+            ////                    Scheme="oauth2",
+            ////                    Name="Bearer",
+            ////                    In=ParameterLocation.Header
+            ////                },
+            ////                new List<string>()
+            ////            }
+            ////        });
+            ////        o.SwaggerDoc("v1", new OpenApiInfo()
+            ////        {
+            ////            Version = "v1",
+            ////            Title = "EasyShop Api",
+            ////        });
+            ////    });
 
 
-            }
+            ////}
 
 
         }
