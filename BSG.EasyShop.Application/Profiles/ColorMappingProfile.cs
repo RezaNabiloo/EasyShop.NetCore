@@ -8,7 +8,9 @@ namespace BSG.EasyShop.Application.Profiles
     {
         public ColorMappingProfile()
         {
-            CreateMap<Color, ColorDTO>().ReverseMap();            
+            CreateMap<Color, ColorDTO>().ReverseMap();
+            CreateMap<Color, ColorCreateDTO>().ReverseMap();
+            CreateMap<Color, ColorUpdateDTO>().ReverseMap();
         }
     }
 }

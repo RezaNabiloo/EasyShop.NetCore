@@ -11,7 +11,7 @@ namespace BSG.EasyShop.Application.DTOs.Product
         public long ProductGroupId { get; set; }
         public ProductGroupDTO ProductGroup { get; set; }
         public long? BrandId { get; set; }
-        public ProductImageDTO Brand { get; set; }
+        public BrandDTO Brand { get; set; }
         public long Price { get; set; }
         public long Discount { get; set; }
         public string ShortDescription { get; set; }

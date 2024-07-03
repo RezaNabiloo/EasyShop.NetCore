@@ -34,7 +34,7 @@ namespace BSG.EasyShop.API.Controllers
 
         // GET api/<BrandController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<ProductImageDTO>> Get(long id)
+        public async Task<ActionResult<BrandDTO>> Get(long id)
         {
             var brand = await _mediator.Send(new GetBrandRequest { Id = id });
             return Ok(brand);

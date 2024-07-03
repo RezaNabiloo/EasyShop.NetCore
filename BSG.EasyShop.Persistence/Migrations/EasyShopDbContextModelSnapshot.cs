@@ -165,6 +165,10 @@ namespace BSG.EasyShop.Persistence.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
 
+                    b.Property<string>("Abbreviation")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreateTime")
                         .HasColumnType("datetime2");
 
@@ -199,6 +203,7 @@ namespace BSG.EasyShop.Persistence.Migrations
                         new
                         {
                             Id = 1L,
+                            Abbreviation = "Fa",
                             CreateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDefault = true,
                             LastUpdateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -208,6 +213,7 @@ namespace BSG.EasyShop.Persistence.Migrations
                         new
                         {
                             Id = 2L,
+                            Abbreviation = "En",
                             CreateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDefault = false,
                             LastUpdateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -217,6 +223,7 @@ namespace BSG.EasyShop.Persistence.Migrations
                         new
                         {
                             Id = 3L,
+                            Abbreviation = "Ar",
                             CreateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             IsDefault = false,
                             LastUpdateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),

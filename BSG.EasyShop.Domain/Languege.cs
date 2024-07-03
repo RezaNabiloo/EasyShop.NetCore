@@ -6,6 +6,7 @@ namespace BSG.EasyShop.Domain
     {   
         public string Title { get; set; }
         public string OriginalTitle{ get; set; }
+        public string Abbreviation { get; set; }
         public bool IsDefault { get; set; }
         public string? ImagePath { get; set; }        
     }

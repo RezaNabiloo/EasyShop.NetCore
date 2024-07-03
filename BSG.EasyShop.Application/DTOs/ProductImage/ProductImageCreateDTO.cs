@@ -9,8 +9,7 @@ namespace BSG.EasyShop.Application.DTOs.ProductImage
 {
     public class ProductImageCreateDTO : IProductImageDTO
     {
-        public long ProductId { get; set; }
-        public ProductDTO Product { get; set; }
+        public long ProductId { get; set; }        
         public string ImagePathOriginalSize { get; set; }
         public string ImagePathNormalSize { get; set; }
         public string ImagePathThumbnailSize { get; set; }

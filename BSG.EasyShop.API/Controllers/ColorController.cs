@@ -21,7 +21,7 @@ namespace BSG.EasyShop.API.Controllers
         }
         // GET: api/<ColorController>
         [HttpGet]
-        public async Task<ActionResult<List<ColorDTO>>> Get()
+        public async Task<ActionResult<ColorDTO>> Get()
         {
             var query = await _mediator.Send(new GetColorListRequest());
             return Ok(query);
@@ -29,7 +29,7 @@ namespace BSG.EasyShop.API.Controllers
 
         // GET api/<ColorController>/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<List<ColorDTO>>> Get(int id)
+        public async Task<ActionResult<List<ColorDTO>>> Get(long id)
         {
             var query = await _mediator.Send(new GetColorRequest { Id = id });
             return Ok(query);
@@ -45,15 +45,15 @@ namespace BSG.EasyShop.API.Controllers
 
         // PUT api/<ColorController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult<BaseCommandResponse>> Put(int id, [FromBody] ColorUpdateDTO color)
+        public async Task<ActionResult<BaseCommandResponse>> Put(long id, [FromBody] ColorUpdateDTO color)
         {
-            var command = await _mediator.Send(new UpdateColorCommand { ColorUpdateDTO = color });
+            var command = await _mediator.Send(new UpdateColorCommand { Id=id,ColorUpdateDTO = color });
             return Ok(command);
         }
 
         // DELETE api/<ColorController>/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BaseCommandResponse>> Delete(int id)
+        public async Task<ActionResult<BaseCommandResponse>> Delete(long id)
         {
             var command = await _mediator.Send(new DeleteColorCommand { Id = id});
             return Ok(command);

@@ -17,7 +17,17 @@ namespace BSG.EasyShop.Application.DTOs.ProductImage.Validators
                 var exist = await _productRepository.Exist(id);
                 return !exist;
             }).WithMessage("{PropertyName} not exist.");
-            
+
+            RuleFor(x => x.ImagePathOriginalSize)
+                .NotNull().NotEmpty().WithMessage("{PropertyName} is required.");
+            RuleFor(x => x.ImagePathNormalSize)
+                .NotNull().NotEmpty().WithMessage("{PropertyName} is required.");
+            RuleFor(x => x.ImagePathThumbnailSize)
+                .NotNull().NotEmpty().WithMessage("{PropertyName} is required.");
+            RuleFor(x => x.ImagePathFingerSize)
+                .NotNull().NotEmpty().WithMessage("{PropertyName} is required.");
+
+
         }
     }
 }

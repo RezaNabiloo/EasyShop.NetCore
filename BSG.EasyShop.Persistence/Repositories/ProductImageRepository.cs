@@ -2,7 +2,6 @@
 using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Domain;
 using BSG.EasyShop.Persistence.Repositories.Common;
-using Microsoft.EntityFrameworkCore;
 
 namespace BSG.EasyShop.Persistence.Repositories
 {

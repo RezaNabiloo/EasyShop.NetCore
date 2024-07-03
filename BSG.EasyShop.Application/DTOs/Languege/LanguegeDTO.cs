@@ -5,6 +5,7 @@ namespace BSG.EasyShop.Application.DTOs.Languege
     public class LanguegeDTO:BaseDTO,ILanguegeDTO
     {
         public string Title { get; set; }
+        public string Abbreviation { get; set; }
         public string OriginalTitle { get; set; }
 
 

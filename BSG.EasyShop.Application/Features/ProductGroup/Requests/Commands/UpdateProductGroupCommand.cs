@@ -13,6 +13,7 @@ namespace BSG.EasyShop.Application.Features.ProductGroup.Requests.Commands
     /// </summary>
     public class UpdateProductGroupCommand : IRequest<Unit>
     {
+        public long Id { get; set; }
         public ProductGroupUpdateDTO ProductGroupUpdateDTO { get; set; }
     }
 }

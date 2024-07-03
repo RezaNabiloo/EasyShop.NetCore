@@ -17,10 +17,4 @@
     <ProjectReference Include="..\BSG.EasyShop.Domain\BSG.EasyShop.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Languege\Handlers\" />
-    <Folder Include="Features\ProductTechSpec\" />
-    <Folder Include="Features\ProductGroupTechSpec\" />
-  </ItemGroup>
-
 </Project>

@@ -13,19 +13,22 @@ namespace BSG.EasyShop.Persistence.Configurations.Entities
                     Id=1,
                     Title="پارسی",
                     OriginalTitle= "پارسی",
+                    Abbreviation="Fa",
                     IsDefault=true                    
                 },
                 new Languege {
                     Id=2,
                     Title= "انگلیسی",
                     OriginalTitle="English",
-                    IsDefault=false
+                    Abbreviation = "En",
+                    IsDefault =false
                 },
                 new Languege
                 {
                     Id = 3,
                     Title = "عربی",
                     OriginalTitle = "العربیه",
+                    Abbreviation = "Ar",
                     IsDefault = false
                 }
 
