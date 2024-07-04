@@ -298,7 +298,6 @@ D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BS
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.AssemblyInfoInputs.cache
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.AssemblyInfo.cs
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.csproj.CoreCompileInputs.cache
-D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.MvcApplicationPartsAssemblyInfo.cs
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\BSG.EasyShop.API.MvcApplicationPartsAssemblyInfo.cache
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\staticwebassets\msbuild.BSG.EasyShop.API.Microsoft.AspNetCore.StaticWebAssets.props
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.API\obj\Debug\net7.0\staticwebassets\msbuild.build.BSG.EasyShop.API.props

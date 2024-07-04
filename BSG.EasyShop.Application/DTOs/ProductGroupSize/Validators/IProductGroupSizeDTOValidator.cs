@@ -15,7 +15,7 @@ namespace BSG.EasyShop.Application.DTOs.ProductGroupSize.Validators
             RuleFor(x => x.ProductGroupId).MustAsync(async (id, token) =>
             {
                 var exist = await _productGroupRepository.Exist(id);
-                return !exist;
+                return !exist && id>0;
             }).WithMessage("{PropertyName} not exist.");
             
         }

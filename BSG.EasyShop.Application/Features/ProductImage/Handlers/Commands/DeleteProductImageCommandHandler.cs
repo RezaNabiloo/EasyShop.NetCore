@@ -3,11 +3,12 @@ using BSG.EasyShop.Application.Exceptions;
 using BSG.EasyShop.Application.Features.ProductImage.Requests.Commands;
 using BSG.EasyShop.Application.Contracts.Persistence;
 using MediatR;
-using BSG.EasyShop.Application.Responses;
+using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Domain.Enum;
 
 namespace BSG.EasyShop.Application.Features.ProductImage.Handlers.Commands
 {
-    public class DeleteProductImageCommandHandler : IRequestHandler<DeleteProductImageCommand, BaseCommandResponse>
+    public class DeleteProductImageCommandHandler : IRequestHandler<DeleteProductImageCommand, CommandResponse<string>>
     {
         private readonly IProductImageRepository _productImageRepository;
         private readonly IMapper _mapper;
@@ -18,18 +19,24 @@ namespace BSG.EasyShop.Application.Features.ProductImage.Handlers.Commands
             _mapper = mapper;
         }
 
-        public async Task<BaseCommandResponse> Handle(DeleteProductImageCommand request, CancellationToken cancellationToken)
+        public async Task<CommandResponse<string>> Handle(DeleteProductImageCommand request, CancellationToken cancellationToken)
         {
-            var response = new BaseCommandResponse();
+            var response = new CommandResponse<string>();
             var data = await _productImageRepository.GetItemByKey(request.Id);
             #region Validation            
             if (data == null)
             {
-                throw new NotFoundException(nameof(data), request.Id);
+                response.Success = false;
+                response.Message = "Deletaion Failed.";
+                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item not found." });
             }
             #endregion
-            await _productImageRepository.Remove(data);
-            //return Unit.Value;
+            else
+            {
+                await _productImageRepository.Remove(data);
+                response.Success = true;
+                response.Message = "Creation Successful.";
+            }
             return response;
         }
     }

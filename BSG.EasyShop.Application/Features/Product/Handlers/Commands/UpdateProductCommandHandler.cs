@@ -4,10 +4,11 @@ using BSG.EasyShop.Application.Exceptions;
 using BSG.EasyShop.Application.Features.Product.Requests.Commands;
 using BSG.EasyShop.Application.Contracts.Persistence;
 using MediatR;
+using BSG.EasyShop.Application.Models.Response;
 
 namespace BSG.EasyShop.Application.Features.Product.Handlers.Commands
 {
-    public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, Unit>
+    public class UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand, CommandResponse<string>>
     {
         private readonly IProductRepository _productRepository;
         private readonly IProductGroupRepository _productGroupRepository;
@@ -21,8 +22,9 @@ namespace BSG.EasyShop.Application.Features.Product.Handlers.Commands
             _brandRepository = brandRepository;
             _mapper = mapper;
         }
-        public async Task<Unit> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
+        public async Task<CommandResponse<string>> Handle(UpdateProductCommand request, CancellationToken cancellationToken)
         {
+            var response = new CommandResponse<string>();
             var data = await _productRepository.GetItemByKey(request.Id);
 
             // Update Product
@@ -34,12 +36,18 @@ namespace BSG.EasyShop.Application.Features.Product.Handlers.Commands
 
                 if (validationResult.IsValid == false)
                 {
-                    throw new ValidationException(validationResult);
+                    response.Success = false;
+                    response.Message = "Update failed";
+                    response.ResultMessages = validationResult.Errors.Select(x => new ResultMessage { MessageType = Domain.Enum.ResultMessageType.Validation, Message = x.ErrorMessage }).ToList();
                 }
                 #endregion
-
-                _mapper.Map(request.ProductUpdateDTO, data);
-                await _productRepository.Update(data);
+                else {
+                    _mapper.Map(request.ProductUpdateDTO, data);
+                    await _productRepository.Update(data);
+                    response.Success = true;
+                    response.Message = "Update Successful.";
+                }
+                
             }
             // Confirm Product
             else if (request.ProductConfirmDTO != null)
@@ -50,12 +58,20 @@ namespace BSG.EasyShop.Application.Features.Product.Handlers.Commands
 
                 if (validationResult.IsValid == false)
                 {
-                    throw new ValidationException(validationResult);
+                    response.Success = false;
+                    response.Message = "Update failed";
+                    response.ResultMessages = validationResult.Errors.Select(x => new ResultMessage { MessageType = Domain.Enum.ResultMessageType.Validation, Message = x.ErrorMessage }).ToList();
                 }
                 #endregion
-                await _productRepository.Confirm(data, request.ProductConfirmDTO.IsConfirmed);
+                else
+                {
+                    await _productRepository.Confirm(data, request.ProductConfirmDTO.IsConfirmed);
+                    response.Success = true;
+                    response.Message = "Confirm Successful.";
+                }
+
             }
-            return Unit.Value;
+            return response;
 
         }
     }

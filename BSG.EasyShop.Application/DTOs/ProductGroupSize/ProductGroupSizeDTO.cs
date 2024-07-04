@@ -1,8 +1,7 @@
 ﻿using BSG.EasyShop.Application.DTOs.Common;
 using BSG.EasyShop.Application.DTOs.ProductGroup;
-using BSG.EasyShop.Application.DTOs.ProductGroupSize;
 
-namespace BSG.EasyShop.Application.DTOs.Brand
+namespace BSG.EasyShop.Application.DTOs.ProductGroupSize
 {
     public class ProductGroupSizeDTO:BaseDTO,IProductGroupSizeDTO
     {

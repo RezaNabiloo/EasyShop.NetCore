@@ -1,7 +1,6 @@
-﻿namespace BSG.EasyShop.Application.Responses
+﻿namespace BSG.EasyShop.Application.Models.Response
 {
-    //public class BaseCommandResponse<T>
-    public class BaseCommandResponse
+    public class BaseCommandResponse<T>
     {
         public long? Id { get; set; }
         //public T Result { get; set; }

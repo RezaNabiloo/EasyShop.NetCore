@@ -1,18 +1,18 @@
 ﻿using BSG.EasyShop.Application.Contracts.Persistence;
-using BSG.EasyShop.Application.DTOs.ProductImage.Validators;
+using BSG.EasyShop.Application.DTOs.ProductGroup;
 using FluentValidation;
 
-namespace BSG.EasyShop.Application.DTOs.ProductImage.Validators
+namespace BSG.EasyShop.Application.DTOs.ProductGroupSize.Validators
 {
-    public class ProductGroupSizeCreateDTOValidator:AbstractValidator<ProductImageCreateDTO>
+    public class ProductGroupSizeCreateDTOValidator:AbstractValidator<ProductGroupSizeCreateDTO>
     {
-        private readonly IProductRepository _productRepository;
+        private readonly IProductGroupRepository _productGroupRepository;
 
-        public ProductGroupSizeCreateDTOValidator(IProductRepository productRepository)
+        public ProductGroupSizeCreateDTOValidator(IProductGroupRepository productGroupRepository)
         {
-            _productRepository = productRepository;
+            _productGroupRepository = productGroupRepository;
                 
-            Include(new IProductImageDTOValidator(_productRepository));
+            Include(new IProductGroupSizeDTOValidator(_productGroupRepository));
             
         }
     }

@@ -4,12 +4,13 @@ using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Application.DTOs.Province.Validators;
 using BSG.EasyShop.Application.Features.Province.Requests.Commands;
 using BSG.EasyShop.Application.Models;
-using BSG.EasyShop.Application.Responses;
+using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Domain.Enum;
 using MediatR;
 
 namespace BSG.EasyShop.Application.Features.Province.Handlers.Commands
 {
-    public class CreateProvinceCommandHandler : IRequestHandler<CreateProvinceCommand, BaseCommandResponse>
+    public class CreateProvinceCommandHandler : IRequestHandler<CreateProvinceCommand, CommandResponse<long>>
     {
         private readonly IProvinceRepository _ProvinceRepository;
         private readonly ICountryRepository _countryRepository;
@@ -23,9 +24,9 @@ namespace BSG.EasyShop.Application.Features.Province.Handlers.Commands
             _mapper = mapper;
             _emailSender = emailSender;
         }
-        public async Task<BaseCommandResponse> Handle(CreateProvinceCommand request, CancellationToken cancellationToken)
+        public async Task<CommandResponse<long>> Handle(CreateProvinceCommand request, CancellationToken cancellationToken)
         {
-            var response = new BaseCommandResponse { };
+            var response = new CommandResponse<long>();
             #region Validation
             var validator = new ProvinceCreateDTOValidator(_countryRepository);
             var validationResult = await validator.ValidateAsync(request.ProvinceCreateDTO);
@@ -35,35 +36,19 @@ namespace BSG.EasyShop.Application.Features.Province.Handlers.Commands
                 //throw new ValidationException(validationResult);
                 response.Success = false;
                 response.Message = "Creation Failed.";
-                response.Errors = validationResult.Errors.Select(x => x.ErrorMessage).ToList();
+                response.ResultMessages = validationResult.Errors.Select(x => new ResultMessage { MessageType = ResultMessageType.Validation, Message = x.ErrorMessage }).ToList();
             }
             #endregion
+            else
+            {
+                var data = _mapper.Map<Domain.Province>(request.ProvinceCreateDTO);
+                await _ProvinceRepository.Add(data);
 
-            var data = _mapper.Map<Domain.Province>(request.ProvinceCreateDTO);
-            await _ProvinceRepository.Add(data);
+                response.Result= data.Id;
+                response.Success = true;
+                response.Message = "Creation Successful.";
+            }
 
-            response.Id = data.Id;
-            response.Success = true;
-            response.Message = "Creation Successful.";
-
-
-            //var email = new Email
-            //{
-            //    To = "Customer@gmail.com",
-            //    Subject = "Create Province Submited.",
-            //    Body = $"Province creation successfully with id : {data.Id}" +
-            //            $"you can see this in database"
-            //};
-
-            //try
-            //{
-            //    await _emailSender.SendEmail(email);
-            //}
-            //catch (Exception)
-            //{
-            //    // TOD O
-            //    // log error
-            //}
             return response;
         }
     }

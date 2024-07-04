@@ -4,10 +4,11 @@ using BSG.EasyShop.Application.Exceptions;
 using BSG.EasyShop.Application.Features.ProductGroup.Requests.Commands;
 using BSG.EasyShop.Application.Contracts.Persistence;
 using MediatR;
+using BSG.EasyShop.Application.Models.Response;
 
 namespace BSG.EasyShop.Application.Features.ProductGroup.Handlers.Commands
 {
-    public class UpdateProductGroupCommandHandler : IRequestHandler<UpdateProductGroupCommand, Unit>
+    public class UpdateProductGroupCommandHandler : IRequestHandler<UpdateProductGroupCommand, CommandResponse<string>>
     {
         private readonly IProductGroupRepository _productGroupRepository;
         private readonly IMapper _mapper;
@@ -17,23 +18,29 @@ namespace BSG.EasyShop.Application.Features.ProductGroup.Handlers.Commands
             _productGroupRepository = productGroupRepository;
             _mapper = mapper;
         }
-        public async Task<Unit> Handle(UpdateProductGroupCommand request, CancellationToken cancellationToken)
+        public async Task<CommandResponse<string>> Handle(UpdateProductGroupCommand request, CancellationToken cancellationToken)
         {
+            var response = new CommandResponse<string>();
             #region Validation
             var validator = new ProductGroupUpdateDTOValidator(_productGroupRepository);
             var validationResult = await validator.ValidateAsync(request.ProductGroupUpdateDTO);
-
+            #endregion
             if (validationResult.IsValid == false)
             {
-                throw new ValidationException(validationResult);
+                response.Success = false;
+                response.Message = "Update failed";
+                response.ResultMessages = validationResult.Errors.Select(x => new ResultMessage { MessageType = Domain.Enum.ResultMessageType.Validation, Message = x.ErrorMessage }).ToList();
             }
-            #endregion
-
-
-            var data = await _productGroupRepository.GetItemByKey(request.ProductGroupUpdateDTO.Id);
-            data = _mapper.Map<Domain.ProductGroup>(request.ProductGroupUpdateDTO);
-            await _productGroupRepository.Update(data);
-            return Unit.Value;  
+            else
+            {
+                var data = await _productGroupRepository.GetItemByKey(request.ProductGroupUpdateDTO.Id);
+                data = _mapper.Map<Domain.ProductGroup>(request.ProductGroupUpdateDTO);
+                await _productGroupRepository.Update(data);
+                response.Success = true;
+                response.Message = "Update Successful.";
+            }
+            return response;
+            //return Unit.Value;  
         }
     }
 }

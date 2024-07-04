@@ -8,6 +8,17 @@
 
 	<ItemGroup>
 	  <Compile Remove="Controllers\AccountController.cs" />
+	  <Compile Remove="Controllers\BrandController.cs" />
+	  <Compile Remove="Controllers\CountryController.cs" />
+	  <Compile Remove="Controllers\LanguegeController.cs" />
+	  <Compile Remove="Controllers\ProductController.cs" />
+	  <Compile Remove="Controllers\ProductGroupController.cs" />
+	  <Compile Remove="Controllers\ProductGroupSizeController.cs" />
+	  <Compile Remove="Controllers\ProductGroupTechSpecController.cs" />
+	  <Compile Remove="Controllers\ProductImageController.cs" />
+	  <Compile Remove="Controllers\ProductTechSpecController.cs" />
+	  <Compile Remove="Controllers\ProvinceController.cs" />
+	  <Compile Remove="Controllers\TownshipController.cs" />
 	</ItemGroup>
 
 	<ItemGroup>

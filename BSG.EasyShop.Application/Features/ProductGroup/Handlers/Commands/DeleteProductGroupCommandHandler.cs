@@ -8,10 +8,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Domain.Enum;
 
 namespace BSG.EasyShop.Application.Features.ProductGroup.Handlers.Commands
 {
-    public class DeleteProductGroupCommandHandler : IRequestHandler<DeleteProductGroupCommand, Unit>
+    public class DeleteProductGroupCommandHandler : IRequestHandler<DeleteProductGroupCommand, CommandResponse<string>>
     {
         private readonly IProductGroupRepository _productGroupRepository;
         private readonly IMapper _mapper;
@@ -22,17 +24,25 @@ namespace BSG.EasyShop.Application.Features.ProductGroup.Handlers.Commands
             _mapper = mapper;
         }
 
-        public async Task<Unit> Handle(DeleteProductGroupCommand request, CancellationToken cancellationToken)
+        public async Task<CommandResponse<string>> Handle(DeleteProductGroupCommand request, CancellationToken cancellationToken)
         {
+            var response = new CommandResponse<string>();
             var data = await _productGroupRepository.GetItemByKey(request.Id);
             #region Validation            
             if (data == null)
             {
-                throw new NotFoundException(nameof(data), request.Id);
+                response.Success = false;
+                response.Message = "Deletaion Failed.";
+                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item not found." });
             }
             #endregion
-            await _productGroupRepository.Remove(data);
-            return Unit.Value;
+            else {
+                await _productGroupRepository.Remove(data);
+                response.Success = true;
+                response.Message = "Creation Successful.";
+            }
+            
+            return response;
         }
     }
 }

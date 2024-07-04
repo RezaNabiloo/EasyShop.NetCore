@@ -1,7 +1,7 @@
 ﻿using BSG.EasyShop.Application.DTOs.Color;
 using BSG.EasyShop.Application.Features.Color.Requests.Commands;
 using BSG.EasyShop.Application.Features.Color.Requests.Queries;
-using BSG.EasyShop.Application.Responses;
+using BSG.EasyShop.Application.Models.Response;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -37,7 +37,7 @@ namespace BSG.EasyShop.API.Controllers
 
         // POST api/<ColorController>
         [HttpPost]
-        public async Task<ActionResult<BaseCommandResponse>> Post([FromBody] ColorCreateDTO color)
+        public async Task<ActionResult<CommandResponse<long>>> Post([FromBody] ColorCreateDTO color)
         {
             var command = await _mediator.Send(new CreateColorCommand { ColorCreateDTO = color });
             return Ok(command);
@@ -45,7 +45,7 @@ namespace BSG.EasyShop.API.Controllers
 
         // PUT api/<ColorController>/5
         [HttpPut("{id}")]
-        public async Task<ActionResult<BaseCommandResponse>> Put(long id, [FromBody] ColorUpdateDTO color)
+        public async Task<ActionResult<CommandResponse<string>>> Put(long id, [FromBody] ColorUpdateDTO color)
         {
             var command = await _mediator.Send(new UpdateColorCommand { Id=id,ColorUpdateDTO = color });
             return Ok(command);
@@ -53,7 +53,7 @@ namespace BSG.EasyShop.API.Controllers
 
         // DELETE api/<ColorController>/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<BaseCommandResponse>> Delete(long id)
+        public async Task<ActionResult<CommandResponse<string>>> Delete(long id)
         {
             var command = await _mediator.Send(new DeleteColorCommand { Id = id});
             return Ok(command);

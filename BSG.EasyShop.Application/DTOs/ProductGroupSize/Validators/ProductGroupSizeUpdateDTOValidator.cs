@@ -14,7 +14,7 @@ namespace BSG.EasyShop.Application.DTOs.ProductImage.Validators
             _productGroupRepository = productGroupRepository;
 
             Include(new IProductGroupSizeDTOValidator(_productGroupRepository));
-            RuleFor(x => x.Id).NotNull().WithMessage("{PrppertyName} is required.");
+            RuleFor(x => x.Id).NotNull().WithMessage("{PrpertyName} is required.");
         }
     }
 }

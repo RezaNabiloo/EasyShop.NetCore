@@ -1,6 +1,4 @@
-﻿using BSG.EasyShop.Application.DTOs.Common;
-
-namespace BSG.EasyShop.Application.DTOs.Color
+﻿namespace BSG.EasyShop.Application.DTOs.Color
 {
     public interface IColorDTO
     {

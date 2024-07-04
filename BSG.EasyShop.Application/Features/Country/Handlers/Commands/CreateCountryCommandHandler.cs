@@ -3,64 +3,48 @@ using BSG.EasyShop.Application.Contracts.Infrastructure.Email;
 using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Application.DTOs.Country.Validators;
 using BSG.EasyShop.Application.Features.Country.Requests.Commands;
-using BSG.EasyShop.Application.Responses;
+using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Domain.Enum;
 using MediatR;
 
 namespace BSG.EasyShop.Application.Features.Country.Handlers.Commands
 {
-    public class CreateCountryCommandHandler : IRequestHandler<CreateCountryCommand, BaseCommandResponse>
+    public class CreateCountryCommandHandler : IRequestHandler<CreateCountryCommand, CommandResponse<long>>
     {
-        private readonly ICountryRepository _CountryRepository;
+        private readonly ICountryRepository _countryRepository;
         private readonly IMapper _mapper;
         private readonly IEmailSender _emailSender;
 
-        public CreateCountryCommandHandler(ICountryRepository CountryRepository, IMapper mapper, IEmailSender emailSender)
+        public CreateCountryCommandHandler(ICountryRepository countryRepository, IMapper mapper, IEmailSender emailSender)
         {
-            _CountryRepository = CountryRepository;
+            _countryRepository = countryRepository;
             _mapper = mapper;
             _emailSender = emailSender;
         }
-        public async Task<BaseCommandResponse> Handle(CreateCountryCommand request, CancellationToken cancellationToken)
+        public async Task<CommandResponse<long>> Handle(CreateCountryCommand request, CancellationToken cancellationToken)
         {
-            var response = new BaseCommandResponse { };
+            var response = new CommandResponse<long>();
             #region Validation
             var validator = new CountryCreateDTOValidator();
             var validationResult = await validator.ValidateAsync(request.CountryCreateDTO);
+            #endregion
 
             if (validationResult.IsValid == false)
             {
-                //throw new ValidationException(validationResult);
                 response.Success = false;
                 response.Message = "Creation Failed.";
-                response.Errors = validationResult.Errors.Select(x => x.ErrorMessage).ToList();
+                response.ResultMessages = validationResult.Errors.Select(x => new ResultMessage { MessageType = ResultMessageType.Validation, Message = x.ErrorMessage }).ToList();
             }
-            #endregion
+            else
+            {
 
-            var data = _mapper.Map<Domain.Country>(request.CountryCreateDTO);
-            await _CountryRepository.Add(data);
+                var data = _mapper.Map<Domain.Country>(request.CountryCreateDTO);
+                await _countryRepository.Add(data);
+                response.Result = data.Id;
+                response.Success = true;
+                response.Message = "Creation Successful.";
+            }
 
-            response.Id = data.Id;
-            response.Success = true;
-            response.Message = "Creation Successful.";
-
-
-            //var email = new Email
-            //{
-            //    To = "Customer@gmail.com",
-            //    Subject = "Create Country Submited.",
-            //    Body = $"Country creation successfully with id : {data.Id}" +
-            //            $"you can see this in database"
-            //};
-
-            //try
-            //{
-            //    await _emailSender.SendEmail(email);
-            //}
-            //catch (Exception)
-            //{
-            //    // TOD O
-            //    // log error
-            //}
             return response;
         }
     }
