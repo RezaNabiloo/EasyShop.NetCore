@@ -23,7 +23,7 @@ namespace BSG.EasyShop.Application.Features.Color.Handlers.Commands
             var response = new CommandResponse<string?>();
 
             #region Validation
-            var validator = new ColorUpdateDTOValidator();
+            var validator = new ColorUpdateDTOValidator(_colorRepository);
             var validationResult = await validator.ValidateAsync(request.ColorUpdateDTO);
             #endregion
             if (validationResult.IsValid == true)

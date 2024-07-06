@@ -1,7 +1,6 @@
 ﻿using BSG.EasyShop.Application.Contracts.Persistence;
-using BSG.EasyShop.Application.DTOs.Common.Validatotrs;
+using BSG.EasyShop.Application.DTOs.Common.Validators;
 using FluentValidation;
-using System.Security.Cryptography.X509Certificates;
 
 namespace BSG.EasyShop.Application.DTOs.Color.Validators
 {
@@ -12,8 +11,9 @@ namespace BSG.EasyShop.Application.DTOs.Color.Validators
         public ColorUpdateDTOValidator(IColorRepository colorRepository)
         {
             _colorRepository = colorRepository;
-            Include(new IColorExistValidator(colorRepository));
-            Include(new IColorDTOValidator());
+            //Include(new IColorExistValidator(_colorRepository));
+            Include(new IExistValidator(_colorRepository));
+            Include(new IColorDTOValidator());            
 
             RuleFor(x => x.Id)
                 .NotNull().GreaterThan(0).WithMessage("{PropertyNam} is required.");
