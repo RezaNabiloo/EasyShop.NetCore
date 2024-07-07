@@ -27,15 +27,15 @@ namespace BSG.EasyShop.Application.Features.ProductImage.Handlers.Commands
             if (data == null)
             {
                 response.Success = false;
-                response.Message = "Deletaion Failed.";
-                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item not found." });
+                response.Message = "The deletion was failed.";
+                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not exist." });
             }
             #endregion
             else
             {
                 await _productImageRepository.Remove(data);
                 response.Success = true;
-                response.Message = "Creation Successful.";
+                response.Message = "The deletion was successful.";
             }
             return response;
         }

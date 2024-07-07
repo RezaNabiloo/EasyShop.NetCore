@@ -5,6 +5,7 @@ using BSG.EasyShop.Application.Features.ProductGroup.Requests.Commands;
 using BSG.EasyShop.Application.Contracts.Persistence;
 using MediatR;
 using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Domain.Enum;
 
 namespace BSG.EasyShop.Application.Features.ProductGroup.Handlers.Commands
 {
@@ -23,21 +24,29 @@ namespace BSG.EasyShop.Application.Features.ProductGroup.Handlers.Commands
             var response = new CommandResponse<string>();
             #region Validation
             var validator = new ProductGroupUpdateDTOValidator(_productGroupRepository);
-            var validationResult = await validator.ValidateAsync(request.ProductGroupUpdateDTO);
-            #endregion
-            if (validationResult.IsValid == false)
-            {
+            var validationResult = await validator.ValidateAsync(request.ProductGroupUpdateDTO);            
+            if (validationResult.IsValid == false)            {
                 response.Success = false;
-                response.Message = "Update failed";
+                response.Message = "Editing was failed.";
                 response.ResultMessages = validationResult.Errors.Select(x => new ResultMessage { MessageType = Domain.Enum.ResultMessageType.Validation, Message = x.ErrorMessage }).ToList();
             }
+            #endregion
             else
             {
-                var data = await _productGroupRepository.GetItemByKey(request.ProductGroupUpdateDTO.Id);
-                data = _mapper.Map<Domain.ProductGroup>(request.ProductGroupUpdateDTO);
-                await _productGroupRepository.Update(data);
-                response.Success = true;
-                response.Message = "Update Successful.";
+                var productGroup = await _productGroupRepository.GetItemByKey(request.ProductGroupUpdateDTO.Id);
+                if (productGroup == null)
+                {
+                    response.Success = false;
+                    response.Message = "The deletion was failed.";
+                    response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not exist." });
+                }
+                else
+                {
+                    productGroup = _mapper.Map<Domain.ProductGroup>(request.ProductGroupUpdateDTO);
+                    await _productGroupRepository.Update(productGroup);
+                    response.Success = true;
+                    response.Message = "Editing was done successfully.";
+                }
             }
             return response;
             //return Unit.Value;  

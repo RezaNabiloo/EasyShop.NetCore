@@ -30,15 +30,15 @@ namespace BSG.EasyShop.Application.Features.Township.Handlers.Commands
             {
                 //throw new NotFoundException(nameof(data), request.Id);
                 response.Success = false;
-                response.Message = "Deletaion Failed.";
-                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item not found." });
+                response.Message = "The deletion was failed.";
+                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not exist." });
             }
             #endregion
             else
             {
                 await _townshipRepository.Remove(data);
                 response.Success = true;
-                response.Message = "Deletation Successful.";
+                response.Message = "The deletion was successful.";
             }
             return response;
         }

@@ -3,6 +3,7 @@ using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Application.DTOs.ProductImage.Validators;
 using BSG.EasyShop.Application.Features.ProductGroupSize.Requests.Commands;
 using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Domain.Enum;
 using MediatR;
 
 namespace BSG.EasyShop.Application.Features.ProductGroupSize.Handlers.Commands
@@ -29,17 +30,26 @@ namespace BSG.EasyShop.Application.Features.ProductGroupSize.Handlers.Commands
             if (validationResult.IsValid == false)
             {
                 response.Success = false;
-                response.Message = "Update failed";
+                response.Message = "Editing was failed.";
                 response.ResultMessages = validationResult.Errors.Select(x => new ResultMessage { MessageType = Domain.Enum.ResultMessageType.Validation, Message = x.ErrorMessage }).ToList();
             }
             #endregion
             else
             {
-                var data = await _productGroupSizeRepository.GetItemByKey(request.ProductGroupSizeUpdateDTO.Id);
-                data = _mapper.Map<Domain.ProductGroupSize>(request.ProductGroupSizeUpdateDTO);
-                await _productGroupSizeRepository.Update(data);
-                response.Success = true;
-                response.Message = "Update Successful.";
+                var productGroupSize = await _productGroupSizeRepository.GetItemByKey(request.ProductGroupSizeUpdateDTO.Id);
+                if (productGroupSize == null)
+                {
+                    response.Success = false;
+                    response.Message = "The deletion was failed.";
+                    response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not exist." });
+                }
+                else
+                {
+                    productGroupSize = _mapper.Map<Domain.ProductGroupSize>(request.ProductGroupSizeUpdateDTO);
+                    await _productGroupSizeRepository.Update(productGroupSize);
+                    response.Success = true;
+                    response.Message = "Editing was done successfully.";
+                }
             }
             return response;
         }

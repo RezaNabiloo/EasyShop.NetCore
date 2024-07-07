@@ -27,17 +27,17 @@ namespace BSG.EasyShop.Application.Features.ProductGroup.Handlers.Commands
         public async Task<CommandResponse<string>> Handle(DeleteProductGroupCommand request, CancellationToken cancellationToken)
         {
             var response = new CommandResponse<string>();
-            var data = await _productGroupRepository.GetItemByKey(request.Id);
+            var productGroup = await _productGroupRepository.GetItemByKey(request.Id);
             #region Validation            
-            if (data == null)
+            if (productGroup == null)
             {
                 response.Success = false;
-                response.Message = "Deletaion Failed.";
-                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item not found." });
+                response.Message = "The deletion was failed.";
+                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not found." });
             }
             #endregion
             else {
-                await _productGroupRepository.Remove(data);
+                await _productGroupRepository.Remove(productGroup);
                 response.Success = true;
                 response.Message = "Creation Successful.";
             }

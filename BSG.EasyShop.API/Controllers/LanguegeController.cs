@@ -1,9 +1,7 @@
 ﻿using BSG.EasyShop.Application.DTOs.Languege;
 using BSG.EasyShop.Application.Features.Languege.Requests.Commands;
 using BSG.EasyShop.Application.Features.Languege.Requests.Queries;
-using BSG.EasyShop.Application.Features.ProductGroup.Requests.Queries;
 using MediatR;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860

@@ -1,5 +1,5 @@
-﻿using BSG.EasyShop.Application.DTOs.Brand;
-using BSG.EasyShop.Application.DTOs.Product;
+﻿using BSG.EasyShop.Application.DTOs.Product;
+using BSG.EasyShop.Application.DTOs.ProductGroupTechSpec;
 
 namespace BSG.EasyShop.Application.DTOs.ProductTechSpec
 {

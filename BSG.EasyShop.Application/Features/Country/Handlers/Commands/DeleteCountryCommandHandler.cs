@@ -22,22 +22,21 @@ namespace BSG.EasyShop.Application.Features.Country.Handlers.Commands
         {
 
             var response = new CommandResponse<string>();
-            var data = await _countryRepository.GetItemByKey(request.Id);
-
+            var country = await _countryRepository.GetItemByKey(request.Id);
+            
             #region Validation            
-            if (data == null)
+            if (country== null)
             {
-
                 response.Success = false;
-                response.Message = "Deletaion Failed.";
-                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item not found." });
+                response.Message = "Deletion was failed.";
+                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not exist." });
             }
             #endregion
             else
             {
-                await _countryRepository.Remove(data);
+                await _countryRepository.Remove(country);
                 response.Success = true;
-                response.Message = "Creation Successful.";
+                response.Message = "The deletion was Successful.";
             }
             return response;
         }

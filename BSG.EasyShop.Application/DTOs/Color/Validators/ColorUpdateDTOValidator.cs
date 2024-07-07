@@ -1,5 +1,4 @@
 ﻿using BSG.EasyShop.Application.Contracts.Persistence;
-using BSG.EasyShop.Application.DTOs.Common.Validators;
 using FluentValidation;
 
 namespace BSG.EasyShop.Application.DTOs.Color.Validators
@@ -10,14 +9,18 @@ namespace BSG.EasyShop.Application.DTOs.Color.Validators
 
         public ColorUpdateDTOValidator(IColorRepository colorRepository)
         {
-            _colorRepository = colorRepository;
-            //Include(new IColorExistValidator(_colorRepository));
-            Include(new IExistValidator(_colorRepository));
-            Include(new IColorDTOValidator());            
-
-            RuleFor(x => x.Id)
-                .NotNull().GreaterThan(0).WithMessage("{PropertyNam} is required.");
-
+            _colorRepository = colorRepository;            
+            Include(new IColorDTOValidator());
+            RuleFor(x => x.Id).NotNull().GreaterThan(0).WithMessage("{PropertyNam} is required.");
         }
+        //private readonly IGenericRepository<Domain.Color> _colorRepository;
+
+        //public ColorUpdateDTOValidator(IGenericRepository<Domain.Color> colorRepository)
+        //{
+        //    _colorRepository = colorRepository;
+        //    Include(new BaseDTOExistValidator<ColorUpdateDTO, Domain.Color>(_colorRepository));            
+        //    Include(new IColorDTOValidator());            
+        //}
+
     }
 }

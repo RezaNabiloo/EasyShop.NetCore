@@ -21,21 +21,21 @@ namespace BSG.EasyShop.Application.Features.Product.Handlers.Commands
         public async Task<CommandResponse<string>> Handle(DeleteProductCommand request, CancellationToken cancellationToken)
         {
             var response = new CommandResponse<string>();
-            var data = await _productRepository.GetItemByKey(request.Id);
+            var product = await _productRepository.GetItemByKey(request.Id);
             #region Validation            
-            if (data == null)
+            if (product == null)
             {
                 //throw new NotFoundException(nameof(data), request.Id);
                 response.Success = false;
-                response.Message = "Deletaion Failed.";
-                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item not found." });
+                response.Message = "The deletion was failed.";
+                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not found." });
             }
             #endregion
             else
             {
-                await _productRepository.Remove(data);
+                await _productRepository.Remove(product);
                 response.Success = true;
-                response.Message = "Deletation Successful.";
+                response.Message = "The deletion was successful.";
             }
             return response;
         }

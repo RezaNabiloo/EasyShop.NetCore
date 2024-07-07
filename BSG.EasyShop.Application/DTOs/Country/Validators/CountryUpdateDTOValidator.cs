@@ -9,7 +9,7 @@ namespace BSG.EasyShop.Application.DTOs.Country.Validators
             Include(new ICountryDTOValidator());
 
             RuleFor(x => x.Id)
-                .NotNull().GreaterThan(0).WithMessage("{PropertyNam is required.}");                
+                .NotNull().GreaterThan(0).WithMessage("{PropertyNam} is required.");                
             
         }
     }

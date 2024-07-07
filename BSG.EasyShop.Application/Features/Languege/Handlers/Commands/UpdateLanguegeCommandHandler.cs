@@ -3,6 +3,8 @@ using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Application.DTOs.Languege.Validators;
 using BSG.EasyShop.Application.Features.Languege.Requests.Commands;
 using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Domain.Enum;
+using BSG.EasyShop.Domain;
 using MediatR;
 
 namespace BSG.EasyShop.Application.Features.Languege.Handlers.Commands
@@ -24,20 +26,30 @@ namespace BSG.EasyShop.Application.Features.Languege.Handlers.Commands
             #region Validation
             var validator = new LanguegeUpdateDTOValidator();
             var validationResult = await validator.ValidateAsync(request.LanguegeUpdateDTO);
-            #endregion
+            
             if (validationResult.IsValid == false)
             {
                 response.Success = false;
-                response.Message = "Update failed";
+                response.Message = "Editing was failed.";
                 response.ResultMessages = validationResult.Errors.Select(x => new ResultMessage { MessageType = Domain.Enum.ResultMessageType.Validation, Message = x.ErrorMessage }).ToList();
             }
+            #endregion
             else
             {
                 var languege = await _languegeRepository.GetItemByKey(request.Id);
-                _mapper.Map(request.LanguegeUpdateDTO, languege);
-                await _languegeRepository.Update(languege);
-                response.Success = true;
-                response.Message = "Update Successful.";
+                if (languege == null)
+                {
+                    response.Success = false;
+                    response.Message = "The deletion was failed.";
+                    response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not exist." });
+                }
+                else
+                {
+                    _mapper.Map(request.LanguegeUpdateDTO, languege);
+                    await _languegeRepository.Update(languege);
+                    response.Success = true;
+                    response.Message = "Editing was done successfully.";
+                }
             }
 
             return response;

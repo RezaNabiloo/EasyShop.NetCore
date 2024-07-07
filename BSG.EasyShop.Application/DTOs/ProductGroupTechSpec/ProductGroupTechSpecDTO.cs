@@ -3,7 +3,7 @@ using BSG.EasyShop.Application.DTOs.ProductGroup;
 using BSG.EasyShop.Application.DTOs.ProductGroupSize;
 using BSG.EasyShop.Application.DTOs.ProductGroupTechSpec;
 
-namespace BSG.EasyShop.Application.DTOs.Brand
+namespace BSG.EasyShop.Application.DTOs.ProductGroupTechSpec
 {
     public class ProductGroupTechSpecDTO:BaseDTO, IProductGroupTechSpecDTO
     {

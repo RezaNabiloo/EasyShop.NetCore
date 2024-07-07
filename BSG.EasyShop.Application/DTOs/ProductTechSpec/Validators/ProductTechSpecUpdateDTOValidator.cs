@@ -3,7 +3,7 @@ using BSG.EasyShop.Application.DTOs.ProductGroupTechSpec;
 using BSG.EasyShop.Application.DTOs.ProductTechSpec.Validators;
 using FluentValidation;
 
-namespace BSG.EasyShop.Application.DTOs.ProductImage.Validators
+namespace BSG.EasyShop.Application.DTOs.ProductTechSpec.Validators
 {
     public class ProductTechSpecUpdateDTOValidator : AbstractValidator<ProductTechSpecUpdateDTO>
     {

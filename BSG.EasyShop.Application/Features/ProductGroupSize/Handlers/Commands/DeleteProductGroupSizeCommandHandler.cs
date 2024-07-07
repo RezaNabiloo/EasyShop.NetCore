@@ -2,6 +2,7 @@
 using BSG.EasyShop.Application.Contracts.Persistence;
 using BSG.EasyShop.Application.Features.ProductGroupSize.Requests.Commands;
 using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Domain.Enum;
 using MediatR;
 
 namespace BSG.EasyShop.Application.Features.ProductGroupSize.Handlers.Commands
@@ -20,17 +21,18 @@ namespace BSG.EasyShop.Application.Features.ProductGroupSize.Handlers.Commands
         public async Task<CommandResponse<string>> Handle(DeleteProductGroupSizeCommand request, CancellationToken cancellationToken)
         {
             var response =new CommandResponse<string>();
-            var data = await _productGroupSizeRepository.GetItemByKey(request.Id);
+            var productGroupSize = await _productGroupSizeRepository.GetItemByKey(request.Id);
             #region Validation            
-            if (data == null)
+            if (productGroupSize == null)
             {
-                response.Success = false;                
-                response.Message = "Item not found.";
+                response.Success = false;
+                response.Message = "The deletion was failed.";
+                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not exist." });
             }
             #endregion
             else 
             {
-                await _productGroupSizeRepository.Remove(data);
+                await _productGroupSizeRepository.Remove(productGroupSize);
                 response.Success = true;
                 response.Message = "Item deleted successfully.";
             }

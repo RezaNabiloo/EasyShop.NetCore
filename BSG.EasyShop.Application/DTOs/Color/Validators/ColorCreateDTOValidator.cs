@@ -6,9 +6,7 @@ namespace BSG.EasyShop.Application.DTOs.Color.Validators
     {
         public ColorCreateDTOValidator()
         {
-
-            Include(new IColorDTOValidator());
-            
+            Include(new IColorDTOValidator());            
         }
     }
 }

@@ -12,16 +12,13 @@ namespace BSG.EasyShop.Application.DTOs.Product.Validators
             _productRepository = productRepository;
 
 
-            RuleFor(x => x.Id).NotNull().WithMessage("{PropertyNam} is required.")
-                .MustAsync(async (id, token) =>
-                {
-                    var exist = await _productRepository.Exist(id);
-                    return !exist;
-
-                }
-                ).WithMessage("PropertyName dose not exists");
-
-
+            RuleFor(x => x.Id).NotNull().WithMessage("{PropertyNam} is required.");
+                //.MustAsync(async (id, token) =>
+                //{
+                //    var exist = await _productRepository.Exist(id);
+                //    return !exist;
+                //}
+                //).WithMessage("Item dose not exists");
             RuleFor(x => x.IsConfirmed).NotNull().WithMessage("{PropertyNam} is required.");
         }
     }

@@ -4,6 +4,7 @@ using BSG.EasyShop.Application.DTOs.Country.Validators;
 using BSG.EasyShop.Application.DTOs.Township.Validators;
 using BSG.EasyShop.Application.Features.Township.Requests.Commands;
 using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Domain.Enum;
 using MediatR;
 
 namespace BSG.EasyShop.Application.Features.Township.Handlers.Commands
@@ -31,16 +32,24 @@ namespace BSG.EasyShop.Application.Features.Township.Handlers.Commands
             if (validationResult.IsValid == false)
             {
                 response.Success = false;
-                response.Message = "Update failed";
+                response.Message = "Editing was failed.";
                 response.ResultMessages = validationResult.Errors.Select(x => new ResultMessage { MessageType = Domain.Enum.ResultMessageType.Validation, Message = x.ErrorMessage }).ToList();
             }
             else
             {
                 var township = await _townshipRepository.GetItemByKey(request.Id);
-                _mapper.Map(request.TownshipUpdateDTO, township);
-                await _townshipRepository.Update(township);
-                response.Success = true;
-                response.Message = "Update Successful.";
+                if (township == null)
+                {
+                    response.Success = false;
+                    response.Message = "Editing was failed.";
+                    response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not exist." });
+                }
+                {
+                    _mapper.Map(request.TownshipUpdateDTO, township);
+                    await _townshipRepository.Update(township);
+                    response.Success = true;
+                    response.Message = "Editing was done successfully.";
+                }
             }
             return response;
         }

@@ -1,8 +1,8 @@
 ﻿using BSG.EasyShop.Application.DTOs.Common;
 using BSG.EasyShop.Application.DTOs.Product;
-using BSG.EasyShop.Application.DTOs.ProductTechSpec;
+using BSG.EasyShop.Application.DTOs.ProductGroupTechSpec;
 
-namespace BSG.EasyShop.Application.DTOs.Brand
+namespace BSG.EasyShop.Application.DTOs.ProductTechSpec
 {
     public class ProductTechSpecDTO : BaseDTO, IProductTechSpecDTO
     {

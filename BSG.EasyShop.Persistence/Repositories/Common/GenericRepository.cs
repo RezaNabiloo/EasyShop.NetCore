@@ -46,5 +46,6 @@ namespace BSG.EasyShop.Persistence.Repositories.Common
             _context.Entry(entity).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
+                
     }
 }

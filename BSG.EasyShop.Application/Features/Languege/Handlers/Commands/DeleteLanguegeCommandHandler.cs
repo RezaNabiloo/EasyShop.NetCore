@@ -29,17 +29,15 @@ namespace BSG.EasyShop.Application.Features.Languege.Handlers.Commands
             {
                 //throw new NotFoundException(nameof(data), request.Id);
                 response.Success = false;
-                response.Message = "Deletaion Failed.";
-                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item not found." });
+                response.Message = "The deletion was failed.";
+                response.ResultMessages.Add(new ResultMessage { MessageType = ResultMessageType.Validation, Message = "Item dose not found." });
             }
             #endregion
-
             else
             {
-
                 await _languegeRepository.Remove(data);                
                 response.Success = true;
-                response.Message = "Deletation Successful.";
+                response.Message = "The deletion was successful.";
             }
             return response;
         }
