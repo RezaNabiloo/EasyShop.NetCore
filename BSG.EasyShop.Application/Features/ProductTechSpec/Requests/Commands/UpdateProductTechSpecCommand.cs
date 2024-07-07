@@ -1,4 +1,4 @@
-﻿using BSG.EasyShop.Application.DTOs.ProductTechSpec;
+﻿using BSG.EasyShop.Application.DTOs.ProductGroupTechSpec;
 using BSG.EasyShop.Application.Models.Response;
 using MediatR;
 
@@ -10,6 +10,6 @@ namespace BSG.EasyShop.Application.Features.ProductTechSpec.Requests.Commands
     public class UpdateProductTechSpecCommand : IRequest<CommandResponse<string>>
     {
         public long Id { get; set; }
-        public ProductTechSpecCreateDTO ProductTechSpecCreateDTO { get; set; }
+        public ProductTechSpecUpdateDTO ProductTechSpecUpdateDTO { get; set; }
     }
 }

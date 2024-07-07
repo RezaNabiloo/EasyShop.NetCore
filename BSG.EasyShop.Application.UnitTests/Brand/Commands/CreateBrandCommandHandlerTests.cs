@@ -1,6 +1,11 @@
 ﻿using AutoMapper;
 using BSG.EasyShop.Application.Contracts.Infrastructure.Email;
-using BSG.EasyShop.Application.Responses;
+using BSG.EasyShop.Application.Contracts.Persistence;
+using BSG.EasyShop.Application.DTOs.Brand;
+using BSG.EasyShop.Application.Features.Brand.Handlers.Commands;
+using BSG.EasyShop.Application.Features.Brand.Requests.Commands;
+using BSG.EasyShop.Application.Models.Response;
+using BSG.EasyShop.Application.Profiles;
 using BSG.EasyShop.Application.UnitTests.Mocks;
 using Moq;
 using Shouldly;
@@ -12,7 +17,7 @@ namespace BSG.EasyShop.Application.UnitTests.Brand.Commands
         Mock<IBrandRepository> _mockRepository;
         IMapper _mapper;
         IEmailSender _emailSender;
-        BrandCreateDTO _createBrandDTO;
+        BrandCreateDTO _brandCreateBrandDTO;
         public CreateBrandCommandHandlerTests()
         {
             _mockRepository = MockBrandRepository.GetBrandRepository();
@@ -26,7 +31,7 @@ namespace BSG.EasyShop.Application.UnitTests.Brand.Commands
             _mapper = mapperConfig.CreateMapper();
 
             // we can create this object in body. but for make easy i create this in constractor
-            _createBrandDTO = new BrandCreateDTO
+            _brandCreateBrandDTO = new BrandCreateDTO
             {
                 Title = "ال جی",                
                 ImagePath = ""
@@ -39,9 +44,9 @@ namespace BSG.EasyShop.Application.UnitTests.Brand.Commands
         {
             var handler = new CreateBrandCommandHandler(_mockRepository.Object, _mapper, _emailSender);
 
-            var result = await handler.Handle(new CreateBrandCommand() { BrandCreateDTO = _createBrandDTO }, CancellationToken.None);
+            var result = await handler.Handle(new CreateBrandCommand() { BrandCreateDTO = _brandCreateBrandDTO }, CancellationToken.None);
 
-            result.ShouldBeOfType<BaseCommandResponse>();
+            result.ShouldBeOfType<CommandResponse<long>>();
 
             var brands = await _mockRepository.Object.GetAllItems();
             //brands.Count.ShouldBe(4);

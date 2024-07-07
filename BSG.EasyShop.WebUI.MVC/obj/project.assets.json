@@ -10102,23 +10102,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\r.nabiloo.TITZ\\.nuget\\packages\\": {},
+    "C:\\Users\\Duyreza\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.WebUI.MVC\\BSG.EasyShop.WebUI.MVC.csproj",
+      "projectUniqueName": "D:\\EasyShop.NetCore\\BSG.EasyShop.WebUI.MVC\\BSG.EasyShop.WebUI.MVC.csproj",
       "projectName": "BSG.EasyShop.WebUI.MVC",
-      "projectPath": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.WebUI.MVC\\BSG.EasyShop.WebUI.MVC.csproj",
-      "packagesPath": "C:\\Users\\r.nabiloo.TITZ\\.nuget\\packages\\",
-      "outputPath": "D:\\MyApplications\\Projects\\EasyShop.NetCore\\BSG.EasyShop.WebUI.MVC\\obj\\",
+      "projectPath": "D:\\EasyShop.NetCore\\BSG.EasyShop.WebUI.MVC\\BSG.EasyShop.WebUI.MVC.csproj",
+      "packagesPath": "C:\\Users\\Duyreza\\.nuget\\packages\\",
+      "outputPath": "D:\\EasyShop.NetCore\\BSG.EasyShop.WebUI.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\r.nabiloo.TITZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Duyreza\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -10189,7 +10189,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

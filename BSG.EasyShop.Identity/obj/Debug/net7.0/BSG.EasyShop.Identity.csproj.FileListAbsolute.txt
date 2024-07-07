@@ -17,25 +17,6 @@ D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Identity\obj\D
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.pdb
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.genruntimeconfig.cache
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Identity\obj\Debug\net7.0\ref\BSG.EasyShop.Identity.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.deps.json
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.runtimeconfig.json
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.pdb
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Application.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Domain.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Application.pdb
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Domain.pdb
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.csproj.AssemblyReference.cache
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.GeneratedMSBuildEditorConfig.editorconfig
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.AssemblyInfoInputs.cache
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.AssemblyInfo.cs
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.csproj.CoreCompileInputs.cache
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.csproj.CopyComplete
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\refint\BSG.EasyShop.Identity.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.pdb
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.genruntimeconfig.cache
-D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\ref\BSG.EasyShop.Identity.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.deps.json
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.runtimeconfig.json
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.dll
@@ -55,3 +36,22 @@ D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.genruntimeconfig.cache
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\ref\BSG.EasyShop.Identity.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.deps.json
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.runtimeconfig.json
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Identity.pdb
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Application.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Domain.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Application.pdb
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\bin\Debug\net7.0\BSG.EasyShop.Domain.pdb
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.csproj.AssemblyReference.cache
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.GeneratedMSBuildEditorConfig.editorconfig
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.AssemblyInfoInputs.cache
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.AssemblyInfo.cs
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.csproj.CoreCompileInputs.cache
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.csproj.CopyComplete
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\refint\BSG.EasyShop.Identity.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.pdb
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\BSG.EasyShop.Identity.genruntimeconfig.cache
+D:\EasyShop.NetCore\BSG.EasyShop.Identity\obj\Debug\net7.0\ref\BSG.EasyShop.Identity.dll

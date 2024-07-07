@@ -28,24 +28,24 @@ namespace BSG.EasyShop.API.Controllers
         [HttpGet]        
         public async Task<ActionResult<List<ProductDTO>>> Get()
         {
-            var countryList = await _mediator.Send(new GetProductListRequest());
-            return Ok(countryList);
+            var data = await _mediator.Send(new GetProductListRequest());
+            return Ok(data);
         }
 
         // GET api/<ProductController>/5
         [HttpGet("{id}")]
         public async Task<ActionResult<ProductDTO>> Get(long id)
         {
-            var country = await _mediator.Send(new GetProductRequest { Id = id });
-            return Ok(country);
+            var data = await _mediator.Send(new GetProductRequest { Id = id });
+            return Ok(data);
         }
 
         // POST api/<ProductController>
         [HttpPost]
         public async Task<ActionResult<long>> Post([FromBody] ProductCreateDTO dto)
         {
-            var id = await _mediator.Send(new CreateProductCommand { ProductCreateDTO = dto });
-            return Ok(id);
+            var data = await _mediator.Send(new CreateProductCommand { ProductCreateDTO = dto });
+            return Ok(data);
         }
 
         // PUT api/<ProductController>/5

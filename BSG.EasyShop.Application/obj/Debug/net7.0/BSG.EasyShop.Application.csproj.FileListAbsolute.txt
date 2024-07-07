@@ -28,21 +28,6 @@ D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Application\ob
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Application\obj\Debug\net7.0\refint\BSG.EasyShop.Application.dll
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.pdb
 D:\MyApplications\Projects\ASP.NET Core\BSG.EasyShop\BSG.EasyShop.Application\obj\Debug\net7.0\ref\BSG.EasyShop.Application.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Application.deps.json
-D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Application.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Application.pdb
-D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Domain.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Domain.pdb
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.csproj.AssemblyReference.cache
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.AssemblyInfoInputs.cache
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.AssemblyInfo.cs
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.csproj.CoreCompileInputs.cache
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.csproj.CopyComplete
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\refint\BSG.EasyShop.Application.dll
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.pdb
-D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\ref\BSG.EasyShop.Application.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Application.deps.json
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Application.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Application.pdb
@@ -58,3 +43,18 @@ D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\n
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\refint\BSG.EasyShop.Application.dll
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.pdb
 D:\MyApplications\Projects\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\ref\BSG.EasyShop.Application.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.csproj.AssemblyReference.cache
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.AssemblyInfoInputs.cache
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.AssemblyInfo.cs
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.csproj.CoreCompileInputs.cache
+D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Application.deps.json
+D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Application.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Application.pdb
+D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Domain.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Application\bin\Debug\net7.0\BSG.EasyShop.Domain.pdb
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.csproj.CopyComplete
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\refint\BSG.EasyShop.Application.dll
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\BSG.EasyShop.Application.pdb
+D:\EasyShop.NetCore\BSG.EasyShop.Application\obj\Debug\net7.0\ref\BSG.EasyShop.Application.dll

@@ -49,13 +49,13 @@ namespace BSG.EasyShop.API.Controllers
         }
 
         // PUT api/<ProductImageController>/5
-        [HttpPut("{id}")]
-        public async Task<ActionResult> Put(long id, [FromBody] ProductImageUpdateDTO dto)
-        {
-            await _mediator.Send(new UpdateProductImageCommand { Id = id, ProductImageUpdateDTO = dto });
-            return NoContent();
+        //[HttpPut("{id}")]
+        //public async Task<ActionResult> Put(long id, [FromBody] ProductImageUpdateDTO dto)
+        //{
+        //    await _mediator.Send(new UpdateProductImageCommand { Id = id, ProductImageUpdateDTO = dto });
+        //    return NoContent();
 
-        }
+        //}
 
         // DELETE api/<ProductImageController>/5
         [HttpDelete("{id}")]

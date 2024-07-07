@@ -12,6 +12,7 @@ namespace BSG.EasyShop.Application.DTOs.ProductTechSpec.Validators
         {
             _productRepository = productRepository;
             _productGroupTechSpecRepository = productGroupTechSpecRepository;
+
             Include(new IProductTechSpecDTOValidator(_productRepository, _productGroupTechSpecRepository));
             
         }

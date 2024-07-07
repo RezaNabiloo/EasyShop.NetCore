@@ -12,11 +12,13 @@ namespace BSG.EasyShop.Application.Features.ProductGroupTechSpec.Handlers.Comman
     public class CreateProductGroupTechSpecCommandHandler : IRequestHandler<CreateProductGroupTechSpecCommand, CommandResponse<long>>
     {
         private readonly IProductGroupTechSpecRepository _productGroupTechSpecRepository;
+        private readonly IProductGroupRepository _productGroupRepository;
         private readonly IMapper _mapper;
 
-        public CreateProductGroupTechSpecCommandHandler(IProductGroupTechSpecRepository productGroupTechSpecRepository, IMapper mapper)
+        public CreateProductGroupTechSpecCommandHandler(IProductGroupTechSpecRepository productGroupTechSpecRepository, IProductGroupRepository productGroupRepository, IMapper mapper)
         {
             _productGroupTechSpecRepository = productGroupTechSpecRepository;
+            _productGroupRepository = productGroupRepository;
             _mapper = mapper;
         }
 
@@ -24,7 +26,7 @@ namespace BSG.EasyShop.Application.Features.ProductGroupTechSpec.Handlers.Comman
         {
             var response = new CommandResponse<long>();
             #region Validation
-            var validator = new ProductGroupTechSpecCreateDTOValidator(_productGroupTechSpecRepository);
+            var validator = new ProductGroupTechSpecCreateDTOValidator(_productGroupRepository);
             var validationResult = await validator.ValidateAsync(request.ProductGroupTechSpecCreateDTO);
             #endregion
             if (validationResult.IsValid == false)

@@ -4,6 +4,7 @@ using BSG.EasyShop.Application.DTOs.ProductTechSpec.Validators;
 using BSG.EasyShop.Application.Features.ProductTechSpec.Requests.Commands;
 using BSG.EasyShop.Application.Models.Response;
 using BSG.EasyShop.Domain.Enum;
+using FluentValidation;
 using MediatR;
 
 namespace BSG.EasyShop.Application.Features.ProductTechSpec.Handlers.Commands
@@ -36,7 +37,7 @@ namespace BSG.EasyShop.Application.Features.ProductTechSpec.Handlers.Commands
             #endregion
             else
             {
-                var product = await _productTechSpecRepository.GetItemByKey(request.ProductTechSpecUpdateDTO.Id);
+                var product = await _productTechSpecRepository.GetItemByKey(request.Id);
                 if (product == null)
                 {
                     response.Success = false;
@@ -45,7 +46,7 @@ namespace BSG.EasyShop.Application.Features.ProductTechSpec.Handlers.Commands
                 }
                 else
                 {
-                    product = _mapper.Map<Domain.ProductTechSpec>(request.ProductTechSpecUpdateDTO);
+                    product = _mapper.Map<Domain.ProductTechSpec>(request.Id);
                     await _productTechSpecRepository.Update(product);
                     response.Success = true;
                     response.Message = "Editing was done successfully.";
