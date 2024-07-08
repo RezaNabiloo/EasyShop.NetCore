@@ -9,7 +9,7 @@ namespace BSG.EasyShop.WebUI.MVC
         public MappingProfile()
         {
             CreateMap<BrandCreateDTO, BrandCreateVM>().ReverseMap();
-            CreateMap<BrandListDTO, BrandVM>().ReverseMap();
+            CreateMap<BrandDTO, BrandVM>().ReverseMap();
             CreateMap<BrandUpdateDTO, BrandVM>().ReverseMap();
             CreateMap<BrandDTO, BrandVM>().ReverseMap();
 

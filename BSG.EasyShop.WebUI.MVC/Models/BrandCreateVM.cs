@@ -5,10 +5,7 @@ namespace BSG.EasyShop.WebUI.MVC.Models
     public class BrandCreateVM
     {
         [Required]
-        public string FaTitle { get; set; }
-
-        [Required]
-        public string EnTitle { get; set; }
+        public string Title { get; set; }
 
         [Required]
         public string ImagePath { get; set; }

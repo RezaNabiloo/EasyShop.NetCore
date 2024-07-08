@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\Base\ServiceClient_.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
     <PackageReference Include="LocalStorage" Version="2.1.0" />
@@ -16,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Models\Brand\" />
     <Folder Include="Models\Languege\" />
     <Folder Include="Models\Country\" />
     <Folder Include="Models\Color\" />
